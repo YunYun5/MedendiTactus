@@ -1,0 +1,105 @@
+.btn-nav {
+    background-color: #073765;
+    font-weight: 500;
+    color: white;
+}
+
+body {
+    background-color: #e2ecf4;
+  }
+  
+  .sidebar {
+    background-color: #f5f1f1;
+  }
+  
+  .navbar-brand img {
+    max-height: 50px;
+    max-width: 175px;
+    height: auto;
+    width: auto;
+  }
+  
+  .navbar {
+    background-color: #A8A9AA;
+  }
+  /* .mx-6 {
+    margin-left: 5rem;
+    margin-right: 5rem;
+  }
+  
+  .px-6 {
+    padding-left: 5rem;
+    padding-right: 5rem;
+  } */
+  
+  .navbar-collapse-border {
+    border-top: none;
+  }
+  
+  @media (max-width: 991px) {
+    .navbar-collapse-border {
+      border-top: 1px solid rgba(26, 105, 175, 0.25);
+    }
+  
+    .toggler {
+      background-color: transparent;
+      margin-bottom: 5px;
+    }
+  
+    /* Default Hamburger icon */
+    .toggler-icon {
+      width: 30px;
+      height: 2px;
+      background-color: black;
+      display: inline-block;
+      position: relative;
+    }
+  
+    .toggler-icon::before,
+    .toggler-icon::after {
+      content: "";
+      width: 30px;
+      height: 2px;
+      background-color: black;
+      display: inline-block;
+      position: absolute;
+      left: 0;
+      transition: all 0.3s ease;
+    }
+  
+    .toggler-icon::before {
+      top: -8px;
+    }
+  
+    .toggler-icon::after {
+      top: 8px;
+    }
+  
+    /* Hide the middle line when not collapsed */
+    .toggler:not(.collapsed) .toggler-icon {
+      background-color: transparent;
+    }
+  
+    .toggler:not(.collapsed) .toggler-icon::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+  
+    .toggler:not(.collapsed) .toggler-icon::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+  
+  @media (max-width: 767.98px) {
+    /* .mx-6 {
+      margin-left: 1.5rem;
+      margin-right: 1.5rem;
+    }
+  
+    .px-6 {
+      padding-left: 1.5rem;
+      padding-right: 1.5rem;
+    } */
+  }
+  
