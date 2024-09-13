@@ -54,11 +54,7 @@ h1 {
   font-style: normal;
   color: white;
   font-size: 4.313rem;
-  margin-top: 5rem;
-}
-
-.h1 {
-  font-family: "Cinzel", system-ui;
+  margin-top: 4rem;
 }
 
 .navbar-collapse-border {
@@ -73,6 +69,10 @@ h1 {
 .px-6 {
   padding-left: 5rem;
   padding-right: 5rem;
+}
+
+.gap-6 {
+  gap: 5rem;
 }
 
 @media (max-width: 991px) {
