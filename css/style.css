@@ -1,98 +1,145 @@
-.btn-nav {
-    background-color: #073765;
-    font-weight: 500;
-    color: white;
+.btn-consult {
+  background-color: #073765;
+  font-weight: bold;
+  color: white;
+}
+
+.btn-meet {
+  background-color: black;
+  color: white;
+}
+
+.bg-img {
+  height: 90vh;
+  width: 100vw;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+.nav-item {
+  font-size: 20px;
+  color: white;
+  font-weight: 200;
+}
+
+.navbar-scrolled {
+  background-color: #a8a9aa;
+  box-shadow: 0 3px 10px rgba(#a8a9aa, 0.25);
+}
+
+.navbar-unscrolled {
+  background-color: transparent;
+  backdrop-filter: blur(5px);
 }
 
 body {
-    background-color: #e2ecf4;
+  background-color: #e2ecf4;
+  overflow-x: hidden;
+}
+
+.navbar-brand img {
+  max-height: 50px;
+  max-width: 175px;
+  height: auto;
+  width: auto;
+}
+
+h1 {
+  font-family: "Cinzel", system-ui;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
+  color: white;
+  font-size: 4.313rem;
+}
+
+.h1 {
+  font-family: "Cinzel", system-ui;
+}
+
+.navbar-collapse-border {
+  border-top: none;
+}
+
+.mx-6 {
+  margin-left: 5rem;
+  margin-right: 5rem;
+}
+
+.px-6 {
+  padding-left: 5rem;
+  padding-right: 5rem;
+}
+
+@media (max-width: 991px) {
+  h1 {
+    font-family: "Cinzel", system-ui;
+    font-optical-sizing: auto;
+    font-weight: 700;
+    font-style: normal;
+    color: white;
+    font-size: 40px;
   }
-  
-  .sidebar {
-    background-color: #f5f1f1;
-  }
-  
-  .navbar-brand img {
-    max-height: 50px;
-    max-width: 175px;
-    height: auto;
-    width: auto;
-  }
-  
-  .navbar {
-    background-color: #A8A9AA;
-  }
-  /* .mx-6 {
-    margin-left: 5rem;
-    margin-right: 5rem;
-  }
-  
-  .px-6 {
-    padding-left: 5rem;
-    padding-right: 5rem;
-  } */
-  
+
   .navbar-collapse-border {
-    border-top: none;
+    border-top: 1px solid rgba(26, 105, 175, 0.25);
   }
-  
-  @media (max-width: 991px) {
-    .navbar-collapse-border {
-      border-top: 1px solid rgba(26, 105, 175, 0.25);
-    }
-  
-    .toggler {
-      background-color: transparent;
-      margin-bottom: 5px;
-    }
-  
-    /* Default Hamburger icon */
-    .toggler-icon {
-      width: 30px;
-      height: 2px;
-      background-color: black;
-      display: inline-block;
-      position: relative;
-    }
-  
-    .toggler-icon::before,
-    .toggler-icon::after {
-      content: "";
-      width: 30px;
-      height: 2px;
-      background-color: black;
-      display: inline-block;
-      position: absolute;
-      left: 0;
-      transition: all 0.3s ease;
-    }
-  
-    .toggler-icon::before {
-      top: -8px;
-    }
-  
-    .toggler-icon::after {
-      top: 8px;
-    }
-  
-    /* Hide the middle line when not collapsed */
-    .toggler:not(.collapsed) .toggler-icon {
-      background-color: transparent;
-    }
-  
-    .toggler:not(.collapsed) .toggler-icon::before {
-      top: 0;
-      transform: rotate(45deg);
-    }
-  
-    .toggler:not(.collapsed) .toggler-icon::after {
-      top: 0;
-      transform: rotate(-45deg);
-    }
+
+  .toggler {
+    background-color: transparent;
+    margin-bottom: 5px;
   }
-  
-  @media (max-width: 767.98px) {
-    /* .mx-6 {
+
+  /* Default Hamburger icon */
+  .toggler-icon {
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    display: inline-block;
+    position: relative;
+  }
+
+  .toggler-icon::before,
+  .toggler-icon::after {
+    content: "";
+    width: 30px;
+    height: 2px;
+    background-color: black;
+    display: inline-block;
+    position: absolute;
+    left: 0;
+    transition: all 0.3s ease;
+  }
+
+  .toggler-icon::before {
+    top: -8px;
+  }
+
+  .toggler-icon::after {
+    top: 8px;
+  }
+
+  /* Hide the middle line when not collapsed */
+  .toggler:not(.collapsed) .toggler-icon {
+    background-color: transparent;
+  }
+
+  .toggler:not(.collapsed) .toggler-icon::before {
+    top: 0;
+    transform: rotate(45deg);
+  }
+
+  .toggler:not(.collapsed) .toggler-icon::after {
+    top: 0;
+    transform: rotate(-45deg);
+  }
+}
+
+@media (max-width: 767.98px) {
+  /* .mx-6 {
       margin-left: 1.5rem;
       margin-right: 1.5rem;
     }
@@ -101,5 +148,4 @@ body {
       padding-left: 1.5rem;
       padding-right: 1.5rem;
     } */
-  }
-  
+}

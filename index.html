@@ -8,22 +8,24 @@
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
       rel="stylesheet"
       integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
-      crossorigin="anonymous"
-    />
+      crossorigin="anonymous" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@400..900&display=swap" rel="stylesheet" />
 
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <img class="bg-img" src="assets/images/Hero-Image.png" alt="Hero Image" />
     <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg sticky-top px-5">
+    <nav class="navbar navbar-unscrolled navbar-expand-lg sticky-top px-5">
       <div class="container-fluid">
         <!-- Logo -->
         <a class="navbar-brand" href="/">
           <img
-            src="assets/images/Medendi-Logo-Black.png"
+            src="assets/images/Medendi-Logo-White.png"
             alt="MailMaster navigation bar logo"
-            class="d-inline-block align-top"
-          />
+            class="d-inline-block align-top" />
         </a>
         <!-- Toggle Button -->
         <button
@@ -33,60 +35,31 @@
           data-bs-target="#navbarNav"
           aria-controls="navbarNav"
           aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
+          aria-label="Toggle navigation">
           <span class="toggler-icon"></span>
         </button>
         <!-- Collapsable Body -->
-        <div
-          class="collapse navbar-collapse navbar-collapse-border"
-          id="navbarNav"
-        >
-          <div
-            class="navbar-nav justify-content-end align-items-center flex-grow-1 gap-2"
-          >
+        <div class="collapse navbar-collapse navbar-collapse-border" id="navbarNav">
+          <div class="navbar-nav justify-content-end align-items-center flex-grow-1 gap-2">
             <a class="nav-item nav-link" href="/pricing">What We Offer</a>
-            <a class="nav-item nav-link" href="/#features"
-              >Meet Your Therapist</a
-            >
-            <button
-              type="button"
-              class="btn btn-nav"
-              href="/public/views/login.html"
-            >
-              Book Consultation
-            </button>
+            <a class="nav-item nav-link" href="/#features">Meet Your Therapist</a>
+            <button type="button" class="btn btn-consult" href="/public/views/login.html">Book Consultation</button>
           </div>
         </div>
       </div>
     </nav>
 
-    <!-- Hero Banner -->
-    <div class="container text-center my-5 py-sm-0 py-lg-2 py-xl-4">
-      <div class="col-sm-12 col-lg-10 col-xl-10 col-xxl-8 mx-auto">
-        <!-- Hero Text and Action Buttons -->
-        <h1 class="display-4 fw-bold">Think, Don't Write</h1>
-        <h1 class="display-4 fw-medium">Let MailMaster Do The Magic</h1>
-        <div class="col-12 col-md-10 col-lg-9 col-xl-8 mx-auto">
-          <p class="lead mb-4">
-            Harness the power of AI to compose and reply to messages instantly,
-            making your inbox management a breeze.
-          </p>
-          <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
-            <button
-              type="button"
-              class="btn btn-primary btn-lg px-4 me-sm-3"
-              fdprocessedid="qvrbpc"
-            >
-              Start For Free
-            </button>
-            <button
-              type="button"
-              class="btn btn-outline-secondary btn-lg px-4"
-              fdprocessedid="nzh4nj"
-            >
-              Download
-            </button>
+    <!-- Hero -->
+    <div class="div hero-img">
+      <div class="mx-6 px-5 py-5">
+        <div class="flex-lg align-items-center g-5 py-5">
+          <div class="">
+            <h1 class="mb-3">Your Path To Wellness</h1>
+            <p class="lead text-white">Tailored Treatments for Your Unique Needs</p>
+            <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+              <button type="button" class="btn btn-consult btn-lg px-4 me-md-2">Book Consultation</button>
+              <button type="button" class="btn btn-meet btn-lg px-4">Meet Your Therapist</button>
+            </div>
           </div>
         </div>
       </div>
@@ -95,7 +68,6 @@
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
+      crossorigin="anonymous"></script>
   </body>
 </html>
