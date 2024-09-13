@@ -31,12 +31,12 @@
 }
 
 .navbar-unscrolled {
-  background-color: transparent;
+  background-color: rgba(0, 0, 0, 0.15);
   backdrop-filter: blur(5px);
 }
 
 body {
-  background-color: #e2ecf4;
+  background-color: #000c17;
   overflow-x: hidden;
 }
 
@@ -54,6 +54,7 @@ h1 {
   font-style: normal;
   color: white;
   font-size: 4.313rem;
+  margin-top: 5rem;
 }
 
 .h1 {
@@ -139,13 +140,17 @@ h1 {
 }
 
 @media (max-width: 767.98px) {
-  /* .mx-6 {
-      margin-left: 1.5rem;
-      margin-right: 1.5rem;
-    }
-  
-    .px-6 {
-      padding-left: 1.5rem;
-      padding-right: 1.5rem;
-    } */
+  h1 {
+    margin-top: 0px;
+  }
+
+  .mx-6 {
+    margin-left: 2rem;
+    margin-right: 2rem;
+  }
+
+  .px-6 {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
 }
