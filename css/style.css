@@ -4,19 +4,30 @@
   color: white;
 }
 
+.hero-section {
+  position: relative;
+  height: 90vh; /* Set hero section height */
+  overflow: hidden;
+}
+
 .btn-meet {
   background-color: black;
   color: white;
 }
 
 .bg-img {
-  height: 90vh;
-  width: 100vw;
+  height: 100%;
+  width: 100%;
   object-fit: cover;
   position: absolute;
   top: 0;
   left: 0;
-  z-index: -1;
+  z-index: -1; /* Keeps the image behind the content */
+}
+
+.hero-content {
+  position: relative;
+  z-index: 1; /* Ensure the content is above the background image */
 }
 
 .nav-item {
@@ -74,6 +85,10 @@ h1 {
 .gap-6 {
   gap: 5rem;
 }
+
+/* .card {
+  border-radius: 50px;
+} */
 
 @media (max-width: 991px) {
   h1 {

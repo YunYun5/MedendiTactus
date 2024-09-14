@@ -16,42 +16,43 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
-    <img class="bg-img" src="assets/images/Hero-Image.png" alt="Hero Image" />
-    <!-- Navbar -->
-    <nav class="navbar navbar-unscrolled navbar-expand-lg sticky-top px-6">
-      <div class="container-fluid">
-        <!-- Logo -->
-        <a class="navbar-brand" href="/">
-          <img
-            src="assets/images/Medendi-Logo-White.png"
-            alt="MailMaster navigation bar logo"
-            class="d-inline-block align-top" />
-        </a>
-        <!-- Toggle Button -->
-        <button
-          class="toggler shadow-none border-0 collapsed"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarNav"
-          aria-controls="navbarNav"
-          aria-expanded="false"
-          aria-label="Toggle navigation">
-          <span class="toggler-icon"></span>
-        </button>
-        <!-- Collapsable Body -->
-        <div class="collapse navbar-collapse navbar-collapse-border" id="navbarNav">
-          <div class="navbar-nav justify-content-end align-items-center flex-grow-1 gap-2">
-            <a class="nav-item nav-link" href="/pricing">What We Offer</a>
-            <a class="nav-item nav-link" href="/#features">Meet Your Therapist</a>
-            <button type="button" class="btn btn-consult" href="/public/views/login.html">Book Consultation</button>
+    <!-- Hero Section Wrapper -->
+    <section class="hero-section">
+      <img class="bg-img" src="assets/images/Hero-Image.png" alt="Hero Image" />
+      <!-- Navbar -->
+      <nav class="navbar navbar-unscrolled navbar-expand-lg sticky-top px-6">
+        <div class="container-fluid">
+          <!-- Logo -->
+          <a class="navbar-brand" href="/">
+            <img
+              src="assets/images/Medendi-Logo-White.png"
+              alt="MailMaster navigation bar logo"
+              class="d-inline-block align-top" />
+          </a>
+          <!-- Toggle Button -->
+          <button
+            class="toggler shadow-none border-0 collapsed"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation">
+            <span class="toggler-icon"></span>
+          </button>
+          <!-- Collapsable Body -->
+          <div class="collapse navbar-collapse navbar-collapse-border" id="navbarNav">
+            <div class="navbar-nav justify-content-end align-items-center flex-grow-1 gap-2">
+              <a class="nav-item nav-link" href="/pricing">What We Offer</a>
+              <a class="nav-item nav-link" href="/#features">Meet Your Therapist</a>
+              <button type="button" class="btn btn-consult" href="/public/views/login.html">Book Consultation</button>
+            </div>
           </div>
         </div>
-      </div>
-    </nav>
+      </nav>
 
-    <!-- Hero -->
-    <div class="div hero-img">
-      <div class="mx-6 px-6 py-5">
+      <!-- Hero Content -->
+      <div class="hero-content mx-6 px-6 py-5">
         <div class="flex-lg align-items-center g-5 py-5">
           <div class="d-grid gap-4">
             <div class="d-grid gap-2">
@@ -65,15 +66,15 @@
           </div>
         </div>
       </div>
-    </div>
+    </section>
 
     <!-- Award Leaves -->
-    <div class="container-fluid px-6 my-5 pt-5 mt-5">
+    <div class="container-fluid px-6 my-5 py-5 mt-5">
       <div class="text-center d-grid d-md-flex gap-6 justify-content-center align-items-stretch">
         <!-- First Card -->
         <div class="bg-transparent border-0">
           <img
-            src="assets/images/10000-Hours-Clients2.png"
+            src="assets/images/10000-Hours-Clients.png"
             style="height: auto; max-width: 100%"
             class=""
             alt=""
@@ -83,7 +84,7 @@
         <!-- Second Card -->
         <div class="bg-transparent border-0">
           <img
-            src="assets/images/8-Years-Experience2.png"
+            src="assets/images/8-Years-Experience.png"
             style="height: auto; max-width: 100%"
             class=""
             alt=""
@@ -93,10 +94,77 @@
         <!-- Third Card -->
         <div class="bg-transparent border-0">
           <img
-            src="assets/images/Running-BJJ-Gym2.png"
+            src="assets/images/Running-BJJ-Gym.png"
             style="height: auto; max-width: 100%"
             class=""
             alt=""
+            loading="lazy" />
+        </div>
+      </div>
+    </div>
+
+    <!-- How Can We Help -->
+    <div class="container-fluid px-6 my-5">
+      <div class="text-center justify-content-center align-items-center">
+        <h1 class="display-6 fw-bold mb-5 border-bottom">How Can We Help</h1>
+      </div>
+
+      <!-- Massage Therapy -->
+      <div class="d-grid d-lg-flex gap-5 justify-content-center align-items-start">
+        <div>
+          <div class="card border-0 step-card mx-auto rounded-5">
+            <div class="card-body">
+              <h3 class="card-title fw-bold">Massage Therapy</h3>
+              <p class="card-text">offers numerous benefits for both physical and mental well-being.</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 text-center">
+          <img
+            src="assets/images/Medendi-Massage.jpg"
+            class="img-fluid rounded-4"
+            alt="MailMaster Chrome Extension highlighting the download button"
+            loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Facial Stretch Therapy -->
+      <div class="my-5 d-grid d-lg-flex gap-5 justify-content-center align-items-start">
+        <div class="order-lg-2">
+          <div class="card border-0 step-card mx-auto rounded-5">
+            <div class="card-body">
+              <h3 class="card-title fw-bold">Facial Stretch Therapy</h3>
+              <p class="card-text">offers several benefits for both athletes and non-athletes such as ...</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 text-center">
+          <img
+            src="assets/images/Medendi-Anxiety.jpg"
+            class="img-fluid rounded-4"
+            alt="MailMaster Chrome Extension login screen"
+            loading="lazy" />
+        </div>
+      </div>
+
+      <!-- Medical Exercise -->
+      <div class="d-grid d-lg-flex gap-5 justify-content-center align-items-start">
+        <div>
+          <div class="card border-0 step-card mx-auto rounded-5">
+            <div class="card-body">
+              <h3 class="card-title fw-bold">Medical Exercise</h3>
+              <p class="card-text">
+                offers benefits for individuals recovering from injury, managing chronic conditions, or improving
+                overall health
+              </p>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 text-center">
+          <img
+            src="assets/images/Medendi-Exercise.jpg"
+            class="img-fluid rounded-4"
+            alt="MailMaster being used to reply to email highlighting the reply button"
             loading="lazy" />
         </div>
       </div>
