@@ -16,40 +16,41 @@
     <link rel="stylesheet" href="css/style.css" />
   </head>
   <body>
+    <!-- Navbar -->
+    <nav class="navbar navbar-unscrolled navbar-expand-lg sticky-top px-6">
+      <div class="container-fluid">
+        <!-- Logo -->
+        <a class="" href="/">
+          <img
+            src="assets/images/Medendi-Logo-White.png"
+            alt="MailMaster navigation bar logo"
+            class="d-inline-block align-top navbar-brand-bg" />
+        </a>
+        <!-- Toggle Button -->
+        <button
+          class="toggler shadow-none border-0 collapsed"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarNav"
+          aria-controls="navbarNav"
+          aria-expanded="false"
+          aria-label="Toggle navigation">
+          <span class="toggler-icon"></span>
+        </button>
+        <!-- Collapsable Body -->
+        <div class="collapse navbar-collapse navbar-collapse-border" id="navbarNav">
+          <div class="navbar-nav justify-content-end align-items-center flex-grow-1 gap-2">
+            <a class="nav-item nav-link text-white" href="/pricing">What We Offer</a>
+            <a class="nav-item nav-link text-white" href="html/meetYourTherapist.html">Meet Your Therapist</a>
+            <button type="button" class="btn btn-consult" href="/public/views/login.html">Book Consultation</button>
+          </div>
+        </div>
+      </div>
+    </nav>
+
     <!-- Hero Section Wrapper -->
     <section class="hero-section">
       <img class="bg-img" src="assets/images/Hero-Image.png" alt="Hero Image" />
-      <!-- Navbar -->
-      <nav class="navbar navbar-unscrolled navbar-expand-lg sticky-top px-6">
-        <div class="container-fluid">
-          <!-- Logo -->
-          <a class="navbar-brand" href="/">
-            <img
-              src="assets/images/Medendi-Logo-White.png"
-              alt="MailMaster navigation bar logo"
-              class="d-inline-block align-top" />
-          </a>
-          <!-- Toggle Button -->
-          <button
-            class="toggler shadow-none border-0 collapsed"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarNav"
-            aria-controls="navbarNav"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="toggler-icon"></span>
-          </button>
-          <!-- Collapsable Body -->
-          <div class="collapse navbar-collapse navbar-collapse-border" id="navbarNav">
-            <div class="navbar-nav justify-content-end align-items-center flex-grow-1 gap-2">
-              <a class="nav-item nav-link" href="/pricing">What We Offer</a>
-              <a class="nav-item nav-link" href="/#features">Meet Your Therapist</a>
-              <button type="button" class="btn btn-consult" href="/public/views/login.html">Book Consultation</button>
-            </div>
-          </div>
-        </div>
-      </nav>
 
       <!-- Hero Content -->
       <div class="hero-content mx-6 px-6 py-5">
@@ -57,7 +58,7 @@
           <div class="d-grid gap-4">
             <div class="d-grid gap-2">
               <h1 class="mb-0">Your Path To Wellness</h1>
-              <h2 class="lead text-white mb-0">Tailored Treatments for Your Unique Needs</h2>
+              <p class="hero-subheading mb-0">Tailored Treatments for Your Unique Needs</p>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
               <button type="button" class="btn btn-consult btn-lg px-4 me-md-2">Book Consultation</button>
@@ -69,10 +70,10 @@
     </section>
 
     <!-- Award Leaves -->
-    <div class="container-fluid px-6 my-5 py-5 mt-5">
-      <div class="text-center d-grid d-md-flex gap-6 justify-content-center align-items-stretch">
+    <div class="mx-5 py-6">
+      <div class="d-flex gap-lg-5 gap-md-3 gap-1 justify-content-center align-items-stretch">
         <!-- First Card -->
-        <div class="bg-transparent border-0">
+        <div class="">
           <img
             src="assets/images/10000-Hours-Clients.png"
             style="height: auto; max-width: 100%"
@@ -82,7 +83,7 @@
         </div>
 
         <!-- Second Card -->
-        <div class="bg-transparent border-0">
+        <div class="">
           <img
             src="assets/images/8-Years-Experience.png"
             style="height: auto; max-width: 100%"
@@ -92,7 +93,7 @@
         </div>
 
         <!-- Third Card -->
-        <div class="bg-transparent border-0">
+        <div class="">
           <img
             src="assets/images/Running-BJJ-Gym.png"
             style="height: auto; max-width: 100%"
@@ -104,18 +105,59 @@
     </div>
 
     <!-- How Can We Help -->
-    <div class="container-fluid px-6 my-5">
+    <div class="mx-5 my-md-5 my-3">
       <div class="text-center justify-content-center align-items-center">
-        <h1 class="display-6 fw-bold mb-5 border-bottom">How Can We Help</h1>
+        <h2 class="display-6 fw-bold mb-4 mb-md-5">How Can We Help</h2>
       </div>
 
       <!-- Massage Therapy -->
       <div class="d-grid d-lg-flex gap-5 justify-content-center align-items-start">
-        <div>
+        <div class="col-12 col-lg-5">
           <div class="card border-0 step-card mx-auto rounded-5">
-            <div class="card-body">
-              <h3 class="card-title fw-bold">Massage Therapy</h3>
-              <p class="card-text">offers numerous benefits for both physical and mental well-being.</p>
+            <div class="card-body d-flex justify-content-between">
+              <div>
+                <!-- Uncollaped Section Text Content -->
+                <h3 class="card-title fw-bold">Massage Therapy</h3>
+                <p class="card-text">offers numerous benefits for both physical and mental well-being.</p>
+                <!-- Collapsed Section Text Content -->
+                <div class="collapse" id="massageTherapyCollapse">
+                  <div class="">
+                    <ul>
+                      <li>Reduced Muscle Tension</li>
+                      <li>Improved Circulation</li>
+                      <li>Pain Relief</li>
+                      <li>Stress Reduction</li>
+                      <li>Enhanced Flexibility and Range of Motion</li>
+                      <li>Improved Posture</li>
+                      <li>Boosted Immune System</li>
+                      <li>Better Sleep Quality</li>
+                      <li>Injury Recovery</li>
+                      <li>Mental Clarity and Focus</li>
+                      <li>Reduced Headaches</li>
+                      <li>Enhanced Athletic Performance</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Arrow SVG -->
+              <a
+                href="#massageTherapyCollapse"
+                role="button"
+                aria-expanded="false"
+                aria-controls="massageTherapyCollapse"
+                data-bs-toggle="collapse">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  fill="currentColor"
+                  class="bi bi-arrow-down-short"
+                  viewBox="0 0 16 16">
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -130,11 +172,49 @@
 
       <!-- Facial Stretch Therapy -->
       <div class="my-5 d-grid d-lg-flex gap-5 justify-content-center align-items-start">
-        <div class="order-lg-2">
+        <div class="order-lg-2 col-12 col-lg-5">
           <div class="card border-0 step-card mx-auto rounded-5">
-            <div class="card-body">
-              <h3 class="card-title fw-bold">Facial Stretch Therapy</h3>
-              <p class="card-text">offers several benefits for both athletes and non-athletes such as ...</p>
+            <div class="card-body d-flex justify-content-between">
+              <div>
+                <!-- Uncollapsed Section Text Content -->
+                <h3 class="card-title fw-bold">Fascial Stretch Therapy</h3>
+                <p class="card-text">offers several benefits for both athletes and non-athletes such as ...</p>
+                <!-- Collapsed Section Text Content -->
+                <div class="collapse" id="fascialStretchCollapse">
+                  <div class="">
+                    <ul>
+                      <li>Improved Flexibility</li>
+                      <li>Pain Relief</li>
+                      <li>Enhanced Athletic Performance</li>
+                      <li>Better Posture</li>
+                      <li>Stress Reduction</li>
+                      <li>Improved Circulation</li>
+                      <li>Increased Energy</li>
+                      <li>Enchanced Joint Function</li>
+                      <li>Injury Prevention</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Arrow SVG -->
+              <a
+                href="#fascialStretchCollapse"
+                role="button"
+                aria-expanded="false"
+                aria-controls="fascialStretchCollapse"
+                data-bs-toggle="collapse">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  fill="currentColor"
+                  class="bi bi-arrow-down-short"
+                  viewBox="0 0 16 16">
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -149,14 +229,53 @@
 
       <!-- Medical Exercise -->
       <div class="d-grid d-lg-flex gap-5 justify-content-center align-items-start">
-        <div>
+        <div class="col-12 col-lg-5">
           <div class="card border-0 step-card mx-auto rounded-5">
-            <div class="card-body">
-              <h3 class="card-title fw-bold">Medical Exercise</h3>
-              <p class="card-text">
-                offers benefits for individuals recovering from injury, managing chronic conditions, or improving
-                overall health
-              </p>
+            <div class="card-body d-flex justify-content-between">
+              <div>
+                <!-- Uncollaped Section Text Content -->
+                <h3 class="card-title fw-bold">Medical Exercise</h3>
+                <p class="card-text">
+                  offers benefits for individuals recovering from injury, managing chronic conditions, or improving
+                  overall health
+                </p>
+                <!-- Collapsed Section Text Content -->
+                <div class="collapse" id="medicalExerciseCollapse">
+                  <div class="">
+                    <ul>
+                      <li>Improved Physical Function</li>
+                      <li>Pain Management</li>
+                      <li>Injury Prevention</li>
+                      <li>Rehabilitation</li>
+                      <li>Chronic Disease Management</li>
+                      <li>Mental Heatlh Benefits</li>
+                      <li>Enchanced Mobility and Balance</li>
+                      <li>Cardiovascular Health</li>
+                      <li>Bone Health</li>
+                      <li>Increased Energy Levels</li>
+                    </ul>
+                  </div>
+                </div>
+              </div>
+              <!-- Arrow SVG -->
+              <a
+                href="#medicalExerciseCollapse"
+                role="button"
+                aria-expanded="false"
+                aria-controls="medicalExerciseCollapse"
+                data-bs-toggle="collapse">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="50"
+                  height="50"
+                  fill="currentColor"
+                  class="bi bi-arrow-down-short"
+                  viewBox="0 0 16 16">
+                  <path
+                    fill-rule="evenodd"
+                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" />
+                </svg>
+              </a>
             </div>
           </div>
         </div>
@@ -170,6 +289,91 @@
       </div>
     </div>
 
+    <!-- Meet Your Therapist -->
+    <div class="mx-5 my-md-5 my-3">
+      <div class="text-center justify-content-center align-items-center">
+        <h2 class="display-6 fw-bold mb-4 mb-md-5 pt-md-5">Meet Your Therapist</h2>
+      </div>
+      <div class="d-grid d-lg-flex gap-5 justify-content-center align-items-start">
+        <div class="col-12 col-lg-5">
+          <div class="card border-0 step-card mx-auto rounded-5 bg-transparent">
+            <div class="card-body d-flex justify-content-between">
+              <div class="text-white">
+                <!-- Seciton Text Content -->
+                <h3 class="card-title fw-bold">Im Clint</h3>
+                <p class="card-text">
+                  I bring a holistic approach to health and wellness. With a 2nd-degree black belt in Brazilian
+                  Jiu-Jitsu and a black belt in Japanese Jiu-Jitsu, I have honed my expertise and dedication to martial
+                  arts over decades and understand the type of injuries one could face as an athlete. For the past 21
+                  years, I have proudly operated a large martial arts academy in Burlington, Ontario, where I have
+                  cultivated a community of dedicated practitioners and helped countless individuals achieve their
+                  fitness and martial arts goals. My mission is to empower others through movement, strength, and
+                  resilience, fostering both physical and mental well-being.
+                </p>
+                <button type="button" class="btn btn-consult btn-lg px-4 me-md-2 mt-4">Learn More</button>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 col-lg-4 text-center">
+          <img
+            src="assets/images/Clint-Meet-Your-Therapist2.png"
+            class="img-fluid rounded-4"
+            alt="MailMaster being used to reply to email highlighting the reply button"
+            loading="lazy"
+            style="transform: translate(0, -25%)" />
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+    <div class="container bg-white">
+      <footer class="row row-cols-1 row-cols-sm-2 row-cols-md-5 py-5 my-5 border-top">
+        <div class="col mb-3">
+          <a href="/" class="d-flex align-items-center mb-3 link-body-emphasis text-decoration-none">
+            <svg class="bi me-2" width="40" height="32"><use xlink:href="#bootstrap"></use></svg>
+          </a>
+          <p class="text-body-secondary">© 2024</p>
+        </div>
+
+        <div class="col mb-3"></div>
+
+        <div class="col mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+
+        <div class="col mb-3">
+          <h5>Section</h5>
+          <ul class="nav flex-column">
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Home</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Features</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">Pricing</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">FAQs</a></li>
+            <li class="nav-item mb-2"><a href="#" class="nav-link p-0 text-body-secondary">About</a></li>
+          </ul>
+        </div>
+      </footer>
+    </div>
+
+    <script src="js/index.js"></script>
     <script
       src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
       integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
