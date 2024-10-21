@@ -1,5 +1,6 @@
 body {
-  background-color: #000c17;
+  /* Old background color code 000c17 */
+  background-color: black;
   overflow-x: hidden;
 }
 
@@ -10,6 +11,11 @@ body {
 
 svg {
   transition: transform 0.3s ease-in-out;
+}
+
+.therapist-image {
+  /* transform: translate(0, -25%); */
+  margin-top: -50px;
 }
 
 /* Buttons */
@@ -112,6 +118,17 @@ svg {
   background-color: transparent;
 }
 
+/* Footer */
+
+.footer {
+  background-color: #a8a9aa;
+}
+
+.footer-menu {
+  color: #073765;
+  font-size: 20px;
+}
+
 /* Typography */
 
 h1 {
@@ -156,7 +173,21 @@ h2 {
   padding-bottom: 5rem;
 }
 
+@media (max-width: 1370px) {
+  .therapist-image {
+    /* transform: translate(0, 0); */
+    margin-top: 0px;
+  }
+}
+
 @media (max-width: 991px) {
+  .therapist-image {
+    height: 50%;
+    width: 50%;
+    /* transform: translate(0, 0); */
+    margin-top: 0px;
+  }
+
   h1 {
     font-family: "Cinzel", system-ui;
     font-optical-sizing: auto;
