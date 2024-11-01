@@ -1,4 +1,21 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const collapseToggles = document.querySelectorAll('[data-bs-toggle="collapse"]');
+
+  collapseToggles.forEach((toggle) => {
+    toggle.addEventListener("click", function () {
+      const arrowIcon = this.querySelector("svg");
+      const target = document.querySelector(this.getAttribute("href"));
+
+      target.addEventListener("shown.bs.collapse", () => {
+        arrowIcon.classList.add("rotated");
+      });
+
+      target.addEventListener("hidden.bs.collapse", () => {
+        arrowIcon.classList.remove("rotated");
+      });
+    });
+  });
+
   const navbar = document.querySelector(".navbar");
   const navItems = document.querySelectorAll(".nav-item");
   const heroSection = document.querySelector(".hero-section");
@@ -32,22 +49,5 @@ document.addEventListener("DOMContentLoaded", function () {
         navItem.classList.add("text-white");
       });
     }
-  });
-
-  const collapseToggles = document.querySelectorAll('[data-bs-toggle="collapse"]');
-
-  collapseToggles.forEach((toggle) => {
-    toggle.addEventListener("click", function () {
-      const arrowIcon = this.querySelector("svg");
-      const target = document.querySelector(this.getAttribute("href"));
-
-      target.addEventListener("shown.bs.collapse", () => {
-        arrowIcon.classList.add("rotated");
-      });
-
-      target.addEventListener("hidden.bs.collapse", () => {
-        arrowIcon.classList.remove("rotated");
-      });
-    });
   });
 });

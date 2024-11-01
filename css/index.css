@@ -1,0 +1,59 @@
+.rotated {
+  transform: rotate(180deg);
+  transition: transform 0.3s ease;
+}
+
+svg {
+  transition: transform 0.3s ease-in-out;
+}
+
+.therapist-image {
+  /* transform: translate(0, -25%); */
+  margin-top: -50px;
+}
+
+/* Navbar */
+
+.navbar-unscrolled {
+  background-color: rgba(0, 0, 0, 0.15);
+  backdrop-filter: blur(5px);
+}
+
+.navbar-scrolled {
+  background-color: #a8a9aa;
+  box-shadow: 0 3px 10px rgba(#a8a9aa, 0.25);
+}
+
+/* Hero Section */
+
+.hero-section {
+  position: relative;
+  height: 90vh;
+  padding-top: 70px;
+}
+
+.bg-img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+}
+
+@media (max-width: 1370px) {
+  .therapist-image {
+    /* transform: translate(0, 0); */
+    margin-top: 0px;
+  }
+}
+
+@media (max-width: 991px) {
+  .therapist-image {
+    height: 50%;
+    width: 50%;
+    /* transform: translate(0, 0); */
+    margin-top: 0px;
+  }
+}
