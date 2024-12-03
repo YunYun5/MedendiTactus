@@ -103,15 +103,6 @@ h1 {
   margin-top: 4rem;
 }
 
-h2 {
-  font-family: "Cinzel", system-ui;
-  font-optical-sizing: auto;
-  font-weight: 700;
-  font-style: normal;
-  color: white;
-  font-size: 1.938rem;
-}
-
 .hero-subheading {
   color: white;
   font-weight: 400;
