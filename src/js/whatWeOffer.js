@@ -56,58 +56,50 @@ const form = document.getElementById("consultation-form");
 const handleSubmit = async (event) => {
   event.preventDefault(); // Prevent form submission from reloading the page
 
-  const formData = new FormData(form);
+  grecaptcha.ready(async () => {
+    try {
+      // Execute reCAPTCHA and get the token
+      const token = await grecaptcha.execute("6LfVtpIqAAAAAAFtdzD58iQvvwxhNVzz_DayrQ8Z", { action: "submit" });
 
-  await fetch("/", {
-    method: "POST",
-    headers: { "Content-Type": "application/x-www-form-urlencoded" },
-    body: new URLSearchParams(formData).toString(),
+      // Attach the token to the hidden input field
+      document.getElementById("g-recaptcha-response").value = token;
+
+      // Collect form data
+      const formData = new FormData(form);
+
+      console.log(formData);
+
+      const formObject = Object.fromEntries(formData.entries());
+
+      // Submit the data to the Netlify function for validation
+      const response = await fetch("/.netlify/functions/validate-recaptcha", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formObject),
+      });
+
+      const result = await response.json();
+
+      if (result.success && result.score > 0.5) {
+        // If reCAPTCHA validation passes, submit the form to Netlify
+        console.log(formData);
+        await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        });
+
+        // Show the success section
+        document.getElementById("contact-form").classList.add("d-none");
+        document.getElementById("success-section").classList.remove("d-none");
+      } else {
+        alert("Failed reCAPTCHA verification. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error during submission:", error);
+      alert("An error occurred. Please try again later.");
+    }
   });
-
-  // Show the success section
-  document.getElementById("contact-form").classList.add("d-none");
-  document.getElementById("success-section").classList.remove("d-none");
-
-  // grecaptcha.ready(async () => {
-  //   try {
-  //     // Execute reCAPTCHA and get the token
-  //     const token = await grecaptcha.execute("6LfVtpIqAAAAAAFtdzD58iQvvwxhNVzz_DayrQ8Z", { action: "submit" });
-
-  //     // Attach the token to the hidden input field
-  //     document.getElementById("g-recaptcha-response").value = token;
-
-  //     // Collect form data
-  //     const formData = new FormData(form);
-  //     const formObject = Object.fromEntries(formData.entries());
-
-  //     // Submit the data to the Netlify function for validation
-  //     const response = await fetch("/.netlify/functions/validate-recaptcha", {
-  //       method: "POST",
-  //       headers: { "Content-Type": "application/json" },
-  //       body: JSON.stringify(formObject),
-  //     });
-
-  //     const result = await response.json();
-
-  //     if (result.success && result.score > 0.5) {
-  //       // If reCAPTCHA validation passes, submit the form to Netlify
-  //       await fetch("/", {
-  //         method: "POST",
-  //         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-  //         body: new URLSearchParams(formData).toString(),
-  //       });
-
-  //       // Show the success section
-  //       document.getElementById("contact-form").classList.add("d-none");
-  //       document.getElementById("success-section").classList.remove("d-none");
-  //     } else {
-  //       alert("Failed reCAPTCHA verification. Please try again.");
-  //     }
-  //   } catch (error) {
-  //     console.error("Error during submission:", error);
-  //     alert("An error occurred. Please try again later.");
-  //   }
-  // });
 };
 
 form.addEventListener("submit", handleSubmit);
