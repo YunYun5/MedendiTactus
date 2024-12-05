@@ -79,7 +79,11 @@ function handleSubmit(event) {
 
       if (result.success && result.score > 0.5) {
         // If reCAPTCHA validation passes, submit the form to Netlify
-        form.submit();
+        await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(formData).toString(),
+        });
 
         // Show the success section
         document.getElementById("contact-form").classList.add("d-none");
