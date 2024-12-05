@@ -83,7 +83,7 @@ function handleSubmit(event) {
         await fetch("/", {
           method: "POST",
           headers: { "Content-Type": "application/x-www-form-urlencoded" },
-          body: new URLSearchParams(netlifyFormData),
+          body: new URLSearchParams(netlifyFormData).toString(),
         });
 
         // Show the success section
