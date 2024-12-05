@@ -109,19 +109,72 @@ function resetForm() {
   document.getElementById("contact-form").classList.remove("d-none");
 }
 
+// WORKSSSSSSSSSSSSSSSSSSSSSSS
+
+// const form = document.getElementById("consultation-form");
+
+// const handleSubmit = async (event) => {
+//   event.preventDefault(); // Prevent default form submission
+
+//   try {
+//     // Execute reCAPTCHA to get the token
+//     const token = await grecaptcha.execute("6LfVtpIqAAAAAAFtdzD58iQvvwxhNVzz_DayrQ8Z", { action: "submit" });
+
+//     // Attach the token to the hidden input field
+//     document.getElementById("g-recaptcha-response").value = token;
+
+//     // Validate reCAPTCHA token via Netlify Function
+//     const recaptchaResponse = await fetch("/.netlify/functions/validate-recaptcha", {
+//       method: "POST",
+//       headers: { "Content-Type": "application/json" },
+//       body: JSON.stringify({ "g-recaptcha-response": token }),
+//     });
+
+//     const recaptchaResult = await recaptchaResponse.json();
+
+//     if (recaptchaResult.success && recaptchaResult.score > 0.5) {
+//       // If reCAPTCHA is valid, remove the token field from the submission
+//       const formData = new FormData(form);
+//       formData.delete("g-recaptcha-response");
+
+//       // Submit the form to Netlify
+//       await fetch("/", {
+//         method: "POST",
+//         headers: { "Content-Type": "application/x-www-form-urlencoded" },
+//         body: new URLSearchParams(formData).toString(),
+//       });
+
+//       // Show success section and hide the form
+//       document.getElementById("contact-form").classList.add("d-none");
+//       document.getElementById("success-section").classList.remove("d-none");
+//     } else {
+//       alert("Failed reCAPTCHA verification. Please try again.");
+//     }
+//   } catch (error) {
+//     console.error("Error during submission:", error);
+//     alert("An error occurred. Please try again later.");
+//   }
+// };
+
+// form.addEventListener("submit", handleSubmit);
+
 const form = document.getElementById("consultation-form");
 
 const handleSubmit = async (event) => {
-  event.preventDefault(); // Prevent default form submission
+  event.preventDefault(); // Prevent default form submission behavior
 
   try {
-    // Execute reCAPTCHA to get the token
+    // Execute reCAPTCHA and get the token
     const token = await grecaptcha.execute("6LfVtpIqAAAAAAFtdzD58iQvvwxhNVzz_DayrQ8Z", { action: "submit" });
 
-    // Attach the token to the hidden input field
-    document.getElementById("g-recaptcha-response").value = token;
+    // Dynamically add the reCAPTCHA token to the form
+    const recaptchaInput = document.createElement("input");
+    recaptchaInput.setAttribute("type", "hidden");
+    recaptchaInput.setAttribute("name", "g-recaptcha-response");
+    recaptchaInput.setAttribute("value", token);
+    form.appendChild(recaptchaInput);
 
-    // Validate reCAPTCHA token via Netlify Function
+    // Validate reCAPTCHA via Netlify Function
     const recaptchaResponse = await fetch("/.netlify/functions/validate-recaptcha", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
@@ -131,25 +184,24 @@ const handleSubmit = async (event) => {
     const recaptchaResult = await recaptchaResponse.json();
 
     if (recaptchaResult.success && recaptchaResult.score > 0.5) {
-      // If reCAPTCHA is valid, remove the token field from the submission
-      const formData = new FormData(form);
-      formData.delete("g-recaptcha-response");
+      // If reCAPTCHA is valid, remove the token field before submitting
+      recaptchaInput.remove();
 
       // Submit the form to Netlify
       await fetch("/", {
         method: "POST",
         headers: { "Content-Type": "application/x-www-form-urlencoded" },
-        body: new URLSearchParams(formData).toString(),
+        body: new URLSearchParams(new FormData(form)).toString(),
       });
 
-      // Show success section and hide the form
+      // Show success message and hide the form
       document.getElementById("contact-form").classList.add("d-none");
       document.getElementById("success-section").classList.remove("d-none");
     } else {
       alert("Failed reCAPTCHA verification. Please try again.");
     }
   } catch (error) {
-    console.error("Error during submission:", error);
+    console.error("Error during form submission:", error);
     alert("An error occurred. Please try again later.");
   }
 };
