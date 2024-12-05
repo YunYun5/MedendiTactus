@@ -51,10 +51,10 @@ function toggleDetails(cardId) {
   }
 }
 
-function handleSubmit(event) {
-  event.preventDefault(); // Prevent form submission from reloading the page
+const form = document.getElementById("consultation-form");
 
-  const form = document.getElementById("consultation-form");
+const handleSubmit = async (event) => {
+  event.preventDefault(); // Prevent form submission from reloading the page
 
   grecaptcha.ready(async () => {
     try {
@@ -96,7 +96,9 @@ function handleSubmit(event) {
       alert("An error occurred. Please try again later.");
     }
   });
-}
+};
+
+form.addEventListener("submit", handleSubmit);
 
 function resetForm() {
   // Reset the form
