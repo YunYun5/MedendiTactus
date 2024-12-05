@@ -116,7 +116,7 @@ const handleSubmit = async (event) => {
 
   try {
     // Execute reCAPTCHA to get the token
-    const token = await grecaptcha.execute("your-site-key", { action: "submit" });
+    const token = await grecaptcha.execute("6LfVtpIqAAAAAAFtdzD58iQvvwxhNVzz_DayrQ8Z", { action: "submit" });
 
     // Attach the token to the hidden input field
     document.getElementById("g-recaptcha-response").value = token;
