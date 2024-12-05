@@ -57,30 +57,44 @@ function handleSubmit(event) {
   const form = document.getElementById("consultation-form");
 
   grecaptcha.ready(async () => {
-    const token = await grecaptcha.execute("6LfVtpIqAAAAAAFtdzD58iQvvwxhNVzz_DayrQ8Z", { action: "submit" });
+    try {
+      // Execute reCAPTCHA and get the token
+      const token = await grecaptcha.execute("6LfVtpIqAAAAAAFtdzD58iQvvwxhNVzz_DayrQ8Z", { action: "submit" });
 
-    // Attach token to the hidden input
-    document.getElementById("g-recaptcha-response").value = token;
+      // Attach the token to the hidden input field
+      document.getElementById("g-recaptcha-response").value = token;
 
-    // Collect form data
-    const formData = new FormData(form);
-    const formObject = Object.fromEntries(formData.entries());
+      // Collect form data
+      const formData = new FormData(form);
+      const formObject = Object.fromEntries(formData.entries());
 
-    // Submit the data to the Netlify function for validation
-    const response = await fetch("/.netlify/functions/validate-recaptcha", {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify(formObject),
-    });
+      // Submit the data to the Netlify function for validation
+      const response = await fetch("/.netlify/functions/validate-recaptcha", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(formObject),
+      });
 
-    const result = await response.json();
+      const result = await response.json();
 
-    if (result.success && result.score > 0.5) {
-      // If reCAPTCHA validation passes, show the success section
-      document.getElementById("contact-form").classList.add("d-none");
-      document.getElementById("success-section").classList.remove("d-none");
-    } else {
-      alert("Failed reCAPTCHA verification. Please try again.");
+      if (result.success && result.score > 0.5) {
+        // If reCAPTCHA validation passes, submit the form to Netlify
+        const netlifyFormData = new FormData(form); // Netlify uses FormData format
+        await fetch("/", {
+          method: "POST",
+          headers: { "Content-Type": "application/x-www-form-urlencoded" },
+          body: new URLSearchParams(netlifyFormData),
+        });
+
+        // Show the success section
+        document.getElementById("contact-form").classList.add("d-none");
+        document.getElementById("success-section").classList.remove("d-none");
+      } else {
+        alert("Failed reCAPTCHA verification. Please try again.");
+      }
+    } catch (error) {
+      console.error("Error during submission:", error);
+      alert("An error occurred. Please try again later.");
     }
   });
 }
