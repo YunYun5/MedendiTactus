@@ -21,8 +21,8 @@ document.addEventListener("DOMContentLoaded", function () {
   const heroSection = document.querySelector(".hero-section");
   const logo = document.querySelector(".navbar-brand-bg ");
 
-  const whiteLogoSrc = "assets/images/Medendi-Logo-White.png";
-  const blackLogoSrc = "assets/images/Medendi-Logo-Black.png";
+  const whiteLogoSrc = "assets/images/Medendi-Logo-White.webp";
+  const blackLogoSrc = "assets/images/Medendi-Logo-Black.webp";
 
   // Detect scroll event
   window.addEventListener("scroll", function () {
