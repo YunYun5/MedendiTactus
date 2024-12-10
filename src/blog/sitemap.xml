@@ -2,31 +2,46 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>/blog/about/</loc>
-    <lastmod>2023-10-06T20:37:29+07:00</lastmod>
-  </url><url>
-    <loc>/blog/</loc>
-    <lastmod>2023-10-06T20:37:29+07:00</lastmod>
+    <loc>/blog/tags/astronomy/</loc>
+    <lastmod>2024-07-27T13:03:07+07:00</lastmod>
   </url><url>
     <loc>/blog/categories/astronomy/</loc>
-    <lastmod>2023-10-04T22:11:36+07:00</lastmod>
+    <lastmod>2024-07-27T13:03:07+07:00</lastmod>
+  </url><url>
+    <loc>/blog/categories/</loc>
+    <lastmod>2024-07-27T13:03:07+07:00</lastmod>
+  </url><url>
+    <loc>/blog/tags/exoplanets/</loc>
+    <lastmod>2024-07-27T13:03:07+07:00</lastmod>
+  </url><url>
+    <loc>/blog/posts/2022/exoplanets-hunting-copy/</loc>
+    <lastmod>2024-07-27T13:03:07+07:00</lastmod>
+  </url><url>
+    <loc>/blog/tags/exploration/</loc>
+    <lastmod>2024-07-27T13:03:07+07:00</lastmod>
+  </url><url>
+    <loc>/blog/tags/feature/</loc>
+    <lastmod>2024-07-27T13:03:07+07:00</lastmod>
+  </url><url>
+    <loc>/blog/</loc>
+    <lastmod>2024-07-27T13:03:07+07:00</lastmod>
+  </url><url>
+    <loc>/blog/posts/</loc>
+    <lastmod>2024-07-27T13:03:07+07:00</lastmod>
+  </url><url>
+    <loc>/blog/tags/space/</loc>
+    <lastmod>2024-07-27T13:03:07+07:00</lastmod>
+  </url><url>
+    <loc>/blog/tags/</loc>
+    <lastmod>2024-07-27T13:03:07+07:00</lastmod>
+  </url><url>
+    <loc>/blog/about/</loc>
+    <lastmod>2023-10-06T20:37:29+07:00</lastmod>
   </url><url>
     <loc>/blog/tags/black-hole/</loc>
     <lastmod>2023-10-04T22:11:36+07:00</lastmod>
   </url><url>
-    <loc>/blog/categories/</loc>
-    <lastmod>2023-10-04T22:11:36+07:00</lastmod>
-  </url><url>
-    <loc>/blog/posts/</loc>
-    <lastmod>2023-10-04T22:11:36+07:00</lastmod>
-  </url><url>
     <loc>/blog/tags/relativity/</loc>
-    <lastmod>2023-10-04T22:11:36+07:00</lastmod>
-  </url><url>
-    <loc>/blog/tags/space/</loc>
-    <lastmod>2023-10-04T22:11:36+07:00</lastmod>
-  </url><url>
-    <loc>/blog/tags/</loc>
     <lastmod>2023-10-04T22:11:36+07:00</lastmod>
   </url><url>
     <loc>/blog/posts/2023/unveiling-the-secrets-of-black-holes/</loc>
@@ -50,12 +65,6 @@
     <loc>/blog/tags/supernova/</loc>
     <lastmod>2023-09-23T22:45:37+07:00</lastmod>
   </url><url>
-    <loc>/blog/tags/exploration/</loc>
-    <lastmod>2023-08-15T13:45:49+07:00</lastmod>
-  </url><url>
-    <loc>/blog/tags/feature/</loc>
-    <lastmod>2023-08-15T13:45:49+07:00</lastmod>
-  </url><url>
     <loc>/blog/tags/mars/</loc>
     <lastmod>2023-08-15T13:45:49+07:00</lastmod>
   </url><url>
@@ -74,17 +83,11 @@
     <loc>/blog/tags/telescopes/</loc>
     <lastmod>2023-08-07T09:30:32+07:00</lastmod>
   </url><url>
-    <loc>/blog/tags/astronomy/</loc>
-    <lastmod>2023-07-30T09:30:32+07:00</lastmod>
-  </url><url>
     <loc>/blog/tags/telescope/</loc>
     <lastmod>2023-07-30T09:30:32+07:00</lastmod>
   </url><url>
     <loc>/blog/posts/2022/the-hubble-space-telescope/</loc>
     <lastmod>2023-07-30T09:30:32+07:00</lastmod>
-  </url><url>
-    <loc>/blog/tags/exoplanets/</loc>
-    <lastmod>2023-07-27T13:03:07+07:00</lastmod>
   </url><url>
     <loc>/blog/posts/2022/exoplanets-hunting/</loc>
     <lastmod>2023-07-27T13:03:07+07:00</lastmod>
