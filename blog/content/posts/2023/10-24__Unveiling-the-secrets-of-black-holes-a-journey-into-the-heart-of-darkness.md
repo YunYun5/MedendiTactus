@@ -3,7 +3,7 @@ title: "Unveiling the Secrets of Black Holes: A Journey into the Heart of Darkne
 date: 2023-10-04T22:11:36+07:00
 slug: /unveiling-the-secrets-of-black-holes/
 description: Exploring the mysteries of black holes, the enigmatic cosmic phenomena.
-image: images/nadine-shaabana-ZPP-zP8HYG0-unsplash.jpg
+image: 10000-hours-clients.webp
 caption: Photo by Nadine Shaabana on Unsplash.
 categories:
   - astronomy
@@ -13,7 +13,6 @@ tags:
   - relativity
 draft: false
 ---
-
 In the vast expanse of the cosmos, `there` are few objects as mysterious and awe-inspiring as black holes. These enigmatic cosmic phenomena, once thought of as nothing more than theoretical curiosities, have now become a central focus of astronomical research. In this article, we embark on a journey deep into the heart of darkness, unraveling some of the secrets that lie within.
 
 ## Black Holes: What and Why?

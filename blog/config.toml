@@ -49,3 +49,6 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
   [[module.mounts]]
     source = "static"
     target = "static"
+
+[permalinks]
+	posts = "/:slug/"

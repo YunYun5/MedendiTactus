@@ -1,8 +1,9 @@
 ---
 title: "Exoplanets: Hunting for Earth's Cosmic Cousins"
-date: 2023-07-27T13:03:07+07:00
+date: 2022-07-26T23:03:00.000Z
 slug: /exoplanets-hunting/
-description: Discover the fascinating quest to find exoplanets, distant worlds that may resemble Earth.
+description: Discover the fascinating quest to find exoplanets, distant worlds
+  that may resemble Earth.
 image: images/nasa-Ed2AELHKYBw-unsplash.jpg
 caption: Photo by Nasa on Unsplash
 categories:

@@ -2,13 +2,14 @@
 title: "Stellar Spectacles: The Wonders of Supernova Explosions"
 date: 2023-09-23T22:45:37+07:00
 slug: /stellar-spectacles/
-description: Explore the breathtaking phenomena of supernova explosions, the cosmic fireworks of the universe.
-image: images/lionel-hesry-UNd3lRKhwSw-unsplash.jpg
+description: Explore the breathtaking phenomena of supernova explosions, the
+  cosmic fireworks of the universe.
+image: /blog/images/running-bjj-gym.webp
 caption: Photo Lionel HESRY on Unsplash
 categories:
   - astronomy
 tags:
-  - supernova 
+  - supernova
   - cosmic
   - space
 draft: false
