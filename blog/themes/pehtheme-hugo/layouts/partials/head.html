@@ -1,9 +1,24 @@
 <meta charset="utf-8" />
 <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <!-- Dynamic title for SEO -->
-<title>{{ if .IsHome }}{{ .Site.Title }}{{ else }}{{ printf "%s | %s" .Title .Site.Title }}{{ end }}</title>
+<title>
+  {{ if .IsHome }}
+    {{ .Site.Title }}
+  {{ else }}
+    {{ printf "%s | %s" .Title .Site.Title }}
+  {{ end }}
+</title>
 <!-- Dynamic description for SEO -->
-<meta name="description" content="{{ if .IsHome }}{{ .Site.Params.description }}{{ else }}{{ .Params.description }}{{ end }}" />
-{{- partialCached "head/css.html" . -}} {{- partialCached "head/favicon.html" . -}} {{/* Uncomment the line below to enable Google Analytics
-*/}} {{/* template "_internal/google_analytics.html" . */}}
+<meta
+  name="description"
+  content="{{ if .IsHome }}
+    {{ .Site.Params.description }}
+  {{ else }}
+    {{ .Params.description }}
+  {{ end }}"
+/>
+{{- partialCached "head/css.html" . -}}
+{{- partialCached "head/favicon.html" . -}}
+{{/* Uncomment the line below to enable Google Analytics */}}
+{{/* template "_internal/google_analytics.html" . */}}
 <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>

@@ -15,7 +15,7 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 	mainSections = 'posts'
 
 [params.author]
-	name = 'Anthony Arphan'
+	name = 'Clint'
 	bio = 'Debitis assumenda esse dignissimos aperiam delectus maxime tenetur repudiandae dolore'
 	avatar = '/images/nasa-astronaut-unsplash.jpg'
 	twitter = 'https://twitter.com/insertapps'
@@ -26,16 +26,12 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 		pageRef = '/'
 		weight = 10
 	[[menu.main]]
-		name = 'About'
-		pageRef = '/about'
-		weight = 15
-	[[menu.main]]
 		name = 'Tags'
 		pageRef = '/tags'
 		weight = 20
 	[[menu.main]]
-		name = 'Taxonomy'
-		pageRef = '/tags/space/'
+		name = 'Categories'
+		pageRef = '/categories'
 		weight = 25
 
 [module]
@@ -43,12 +39,14 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
     extended = false
     min = "0.116.0"
   [[module.mounts]]
-    source = "assets"
-    target = "assets"
-
+    source = "static/images"
+    target = "assets/images"
   [[module.mounts]]
-    source = "static"
-    target = "static"
+    source = "static/images"
+    target = "static/images"
+  [[module.mounts]]
+	source = "static/admin"
+    target = "static/admin"
 
 [permalinks]
 	posts = "/:slug/"

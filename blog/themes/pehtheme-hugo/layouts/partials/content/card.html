@@ -1,35 +1,59 @@
 <article class="relative group bg-zinc-100 hover:bg-blue-100 rounded-3xl">
-	
-	<a class="insert-link" href="{{ .Permalink }}"></a>
+  <a class="insert-link" href="{{ .Permalink }}"></a>
 
-	<figure class="w-full aspect-video overflow-hidden rounded-3xl">
+  <figure class="w-full aspect-video overflow-hidden rounded-3xl">
+    {{- if .Params.image }}
+      {{- $image := .Params.image -}}
+      {{- $isExternal := strings.HasPrefix $image "http" -}}
+      {{- $isStatic := strings.HasPrefix $image "/blog/images/" -}}
 
-		{{- if .Params.image }}
+      {{- if $isExternal }}
+        <!-- External images: Use directly -->
+        <img
+          class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer"
+          src="{{ $image }}"
+          alt="{{ $.Name }}"
+          style="width: 100%; height: 100%; object-fit: cover;"
+        />
+      {{- else if $isStatic }}
+        <!-- Static images (from /blog/images): Adjust path for processing -->
+        {{- with $processedImage := resources.Get (replace $image "/blog/images/" "images/") }}
+          {{- $resizedImage := $processedImage.Resize "750x" }}
+          <img
+            class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer"
+            src="{{ $resizedImage.Permalink }}"
+            alt="{{ $.Name }}"
+            width="{{ $resizedImage.Width }}"
+            height="{{ $resizedImage.Height }}"
+          />
+        {{- end }}
+      {{- else }}
+        <!-- Local images (relative paths): Process directly -->
+        {{- with $processedImage := resources.Get $image }}
+          {{- $resizedImage := $processedImage.Resize "750x" }}
+          <img
+            class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer"
+            src="{{ $resizedImage.Permalink }}"
+            alt="{{ $.Name }}"
+            width="{{ $resizedImage.Width }}"
+            height="{{ $resizedImage.Height }}"
+          />
+        {{- end }}
+      {{- end }}
 
-		  {{- if (strings.HasPrefix .Params.image "http") }}
+    {{- end }}
 
-			<img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="{{ .Params.image }}" alt="{{ $.Name }}" style="width: 100%; height: 100%; object-fit: cover;">
+  </figure>
 
-		  {{- else }}
+  <div class="p-6">
+    <time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}"
+      >{{ .Date.Format "Jan 02, 2006" }}</time
+    >
 
-			{{- with $imgcard := resources.Get .Params.image -}}
-			  {{- $imgcard := $imgcard.Process "resize 750x" -}}
-			  <img class="object-cover group-hover:scale-105 transition duration-500 cursor-pointer" src="{{ $imgcard.Permalink }}" alt="{{ $.Name }}" width="{{ $imgcard.Width }}" height="{{ $imgcard.Height }}">
-			{{- end }}
+    <h3 class="my-4 text-2xl font-bold">{{ .LinkTitle }}</h3>
 
-		  {{- end }}
-
-		{{- end }}
-
-	  </figure>
-
-	<div class="p-6">
-
-		<time datetime="{{ .Date.Format "2006-01-02T15:04:05-07:00" | safeHTML }}">{{ .Date.Format "Jan 02, 2006" }}</time>
-
-		<h3 class="my-4 text-2xl font-bold">{{ .LinkTitle }}</h3>
-
-		<p class="text-normal leading-normal text-zinc-500 line-clamp-2">{{ .Params.description }}</p>
-
-	</div>
+    <p class="text-normal leading-normal text-zinc-500 line-clamp-2">
+      {{ .Params.description }}
+    </p>
+  </div>
 </article>

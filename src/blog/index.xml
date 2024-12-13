@@ -6,8 +6,29 @@
     <description>Recent content on Pehtheme</description>
     <generator>Hugo</generator>
     <language>en-us</language>
-    <lastBuildDate>Tue, 10 Dec 2024 03:52:00 +0000</lastBuildDate>
+    <lastBuildDate>Fri, 13 Dec 2024 03:15:00 +0000</lastBuildDate>
     <atom:link href="/blog/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Test4</title>
+      <link>/blog/test4/</link>
+      <pubDate>Fri, 13 Dec 2024 03:15:00 +0000</pubDate>
+      <guid>/blog/test4/</guid>
+      <description>&lt;p&gt;&lt;img src=&#34;/blog/blog/images/mgmt100-sei-confirm.png&#34; alt=&#34;&#34;&gt;&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>test3</title>
+      <link>/blog/test3/</link>
+      <pubDate>Fri, 13 Dec 2024 01:34:00 +0000</pubDate>
+      <guid>/blog/test3/</guid>
+      <description>&lt;p&gt;a&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>test2</title>
+      <link>/blog/test2/</link>
+      <pubDate>Fri, 13 Dec 2024 01:31:00 +0000</pubDate>
+      <guid>/blog/test2/</guid>
+      <description>&lt;p&gt;a&lt;/p&gt;</description>
+    </item>
     <item>
       <title>test</title>
       <link>/blog/tes-newnew/</link>

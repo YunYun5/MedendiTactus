@@ -3,7 +3,7 @@ title: "Unveiling the Secrets of Black Holes: A Journey into the Heart of Darkne
 date: 2023-10-04T22:11:36+07:00
 slug: /unveiling-the-secrets-of-black-holes/
 description: Exploring the mysteries of black holes, the enigmatic cosmic phenomena.
-image: 10000-hours-clients.webp
+image: images/10000-hours-clients.webp
 caption: Photo by Nadine Shaabana on Unsplash.
 categories:
   - astronomy
@@ -13,6 +13,7 @@ tags:
   - relativity
 draft: false
 ---
+
 In the vast expanse of the cosmos, `there` are few objects as mysterious and awe-inspiring as black holes. These enigmatic cosmic phenomena, once thought of as nothing more than theoretical curiosities, have now become a central focus of astronomical research. In this article, we embark on a journey deep into the heart of darkness, unraveling some of the secrets that lie within.
 
 ## Black Holes: What and Why?
@@ -38,44 +39,28 @@ Unveiling the secrets of black holes is an ongoing journey. The deeper we delve,
 Whether you're a researcher, an astronomy enthusiast, or simply curious about the secrets of the cosmos, one thing is certain: black holes will continue to be a focal point of research and a marvel of the universe that never ceases to astound us all.
 
 ```html
-{{ define "main" }}
-
-{{- partial "hero.html" . -}}
+{{ define "main" }} {{- partial "hero.html" . -}}
 
 <main class="max-w-7xl mx-auto py-8">
-
   <section class="mb-10">
-
     <div class="flex items-center px-4 sm:px-8 lg:px-8">
-
       <h2 class=" text-2xl font-bold">Latest News</h2>
 
-      <button class="ml-auto border rounded-full px-4 py-1 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800">
-        View all
-      </button>
-
+      <button class="ml-auto border rounded-full px-4 py-1 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800">View all</button>
     </div>
 
     {{- partial "card-list-horizontal.html" . -}}
-
- </section>
-
- <section class="mb-10">
-
-    <div class="flex items-center px-4 sm:px-8 lg:px-8">
-
-      <h2 class=" text-2xl font-bold">Cetegories News</h2>
-
-      <button class="ml-auto border rounded-full px-4 py-1 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800">
-        View all
-      </button>
-
-    </div>
-
-    {{- partial "card-list-horizontal.html" . -}}
-
   </section>
 
+  <section class="mb-10">
+    <div class="flex items-center px-4 sm:px-8 lg:px-8">
+      <h2 class=" text-2xl font-bold">Cetegories News</h2>
+
+      <button class="ml-auto border rounded-full px-4 py-1 dark:border-zinc-700 hover:bg-zinc-100 dark:hover:bg-zinc-800">View all</button>
+    </div>
+
+    {{- partial "card-list-horizontal.html" . -}}
+  </section>
 </main>
 
 {{ end }}

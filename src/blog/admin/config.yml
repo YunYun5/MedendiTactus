@@ -16,8 +16,8 @@ collections:
     create: true
     slug: "{{slug}}"
     path: "{{year}}/{{slug}}"
-    media_folder: /blog/static/images # Global setting for the base media folder
-    public_folder: /blog/images # Global public path for accessing images
+    media_folder: /blog/static/images
+    public_folder: /blog/images
     view_groups:
       - label: Year
         field: date

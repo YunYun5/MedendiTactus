@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test on Pehtheme</title>
+    <link>/blog/categories/test/</link>
+    <description>Recent content in Test on Pehtheme</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Fri, 13 Dec 2024 01:34:00 +0000</lastBuildDate>
+    <atom:link href="/blog/categories/test/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>test3</title>
+      <link>/blog/test3/</link>
+      <pubDate>Fri, 13 Dec 2024 01:34:00 +0000</pubDate>
+      <guid>/blog/test3/</guid>
+      <description>&lt;p&gt;a&lt;/p&gt;</description>
+    </item>
+    <item>
+      <title>test2</title>
+      <link>/blog/test2/</link>
+      <pubDate>Fri, 13 Dec 2024 01:31:00 +0000</pubDate>
+      <guid>/blog/test2/</guid>
+      <description>&lt;p&gt;a&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

@@ -4,7 +4,7 @@ date: 2023-07-27T13:03:07+07:00
 slug: /exoplanets-hunting-copy/
 description: Discover the fascinating quest to find exoplanets, distant worlds
   that may resemble Earth.
-image: clint-meet-your-therapist.webp
+image: images/clint-meet-your-therapist.webp
 caption: Photo by Nasa on Unsplash
 categories:
   - astronomy

@@ -4,7 +4,7 @@ date: 2023-09-23T22:45:37+07:00
 slug: /stellar-spectacles/
 description: Explore the breathtaking phenomena of supernova explosions, the
   cosmic fireworks of the universe.
-image: /blog/images/running-bjj-gym.webp
+image: images/running-bjj-gym.webp
 caption: Photo Lionel HESRY on Unsplash
 categories:
   - astronomy
