@@ -21,12 +21,12 @@ body {
   outline-color: #073765;
 }
 
-.btn-meet {
+.btn-blog {
   background-color: black;
   color: white;
 }
 
-.btn-meet:hover {
+.btn-blog:hover {
   background-color: white;
   color: black;
   outline: 3px;
