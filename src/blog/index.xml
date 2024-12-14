@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Pehtheme</title>
+    <title>Medendi Tactus</title>
     <link>/blog/</link>
-    <description>Recent content on Pehtheme</description>
+    <description>Recent content on Medendi Tactus</description>
     <generator>Hugo</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 13 Dec 2024 03:15:00 +0000</lastBuildDate>
@@ -56,13 +56,6 @@
       <pubDate>Tue, 10 Dec 2024 03:07:00 +0000</pubDate>
       <guid>/blog/test-img/</guid>
       <description>&lt;p&gt;test&lt;/p&gt;</description>
-    </item>
-    <item>
-      <title>About</title>
-      <link>/blog/about/</link>
-      <pubDate>Fri, 06 Oct 2023 20:37:29 +0700</pubDate>
-      <guid>/blog/about/</guid>
-      <description>&lt;p&gt;&lt;strong&gt;Pehtheme Hugo&lt;/strong&gt; is your gateway to the mysteries and wonders of the universe. We are a passionate community of space enthusiasts, scientists, and stargazers dedicated to sharing the awe-inspiring beauty and profound knowledge of the cosmos.&lt;/p&gt;</description>
     </item>
     <item>
       <title>Unveiling the Secrets of Black Holes: A Journey into the Heart of Darkness</title>

@@ -1,7 +1,7 @@
 baseURL = '/blog'
 publishDir = '../src/blog'
 languageCode = 'en-us'
-title = 'Pehtheme'
+title = 'Medendi Tactus'
 theme = 'pehtheme-hugo'
 
 paginate = '6' # <- Set the desired number of posts per page 
@@ -23,7 +23,7 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 [menu] # Menu management
 	[[menu.main]]
 		name = 'Home'
-		pageRef = '/'
+		url = "http://localhost:8888"
 		weight = 10
 	[[menu.main]]
 		name = 'Tags'
