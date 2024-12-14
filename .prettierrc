@@ -1,8 +1,10 @@
 {
+  "bracketSameLine": true,
+  "printWidth": 140,
   "plugins": ["prettier-plugin-go-template"],
   "overrides": [
     {
-      "files": ["*.html"],
+      "files": ["blog/**/*.html"],
       "options": {
         "parser": "go-template"
       }

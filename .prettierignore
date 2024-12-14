@@ -1,5 +1,2 @@
-# Exclude generated or user-facing files
-src/**/*.html
-
 # Node modules (default behavior but listed for clarity)
 node_modules/
