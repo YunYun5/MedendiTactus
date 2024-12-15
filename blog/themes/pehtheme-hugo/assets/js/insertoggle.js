@@ -1,51 +1,63 @@
-// TOGGLE BUTTON
+// Dynamically load the correct navbar based on screen size
+function loadNavbar() {
+  const hamburgerNavbar = document.getElementById("hamburger-navbar");
+  const fullNavbar = document.getElementById("full-navbar");
+  const hamburgerMenuBar = document.getElementById("hamburger-menu-bar");
+
+  if (window.innerWidth < 768) {
+    // Show hamburger navbar for small screens
+    hamburgerNavbar.classList.remove("hidden");
+    fullNavbar.classList.add("hidden");
+    document.getElementById("hamburger-menu-button").setAttribute("aria-expanded", false);
+  } else {
+    // Show full navbar for larger screens
+    fullNavbar.classList.remove("hidden");
+    hamburgerNavbar.classList.add("hidden");
+    hamburgerMenuBar.classList.add("hidden");
+  }
+
+  // Turn hamburger dropdown menu off given any resizing
+  if (!hamburgerMenuBar.classList.contains("hidden")) {
+    hamburgerMenuBar.classList.add("hidden");
+    hamburgerMenuBar.classList.add("-translate-y-full");
+    hamburgerMenuBar.classList.add("opacity-0");
+    hamburgerMenuBar.classList.add("invisible");
+  }
+}
+
+// Toggle functionality for the hamburger menu
 (function () {
-	// Get all elements with the "toggle-button" class
-    const toggleButtons = document.querySelectorAll(".toggle-button");
+  const hamburgerButton = document.getElementById("hamburger-menu-button");
+  const menuBar = document.getElementById("hamburger-menu-bar");
 
-    // Function to hide all elements except the target
-    function hideAllExcept(targetElement) {
-        document.querySelectorAll(".hidden").forEach((element) => {
-            if (element !== targetElement) {
-                element.classList.add("close"); // Hide the element
-                element.classList.remove("open"); // Close previously open elements
-            }
-        });
-    }
-
-    // Function to toggle the state of an element (open/close)
-    function toggleElement(targetElement) {
-        const isHidden = targetElement.classList.contains("close");
-        hideAllExcept(targetElement);
-        targetElement.classList.toggle("close", !isHidden);
-        targetElement.classList.toggle("open", isHidden);
-    }
-
-    toggleButtons.forEach((button) => {
-        button.addEventListener("click", function () {
-            const targetIds = this.getAttribute("data-target").split(" ");
-            targetIds.forEach((targetId) => {
-                const targetElement = document.getElementById(targetId);
-                if (targetElement) {
-                    toggleElement(targetElement);
-                }
-            });
-        });
+  if (hamburgerButton && menuBar) {
+    // Add event listener to the hamburger button
+    hamburgerButton.addEventListener("click", function () {
+      const isHidden = menuBar.classList.contains("hidden"); // Toggle the 'hidden' class
+      hamburgerButton.setAttribute("aria-expanded", isHidden); // Update aria-expanded attribute
+      if (isHidden) {
+        menuBar.classList.remove("hidden");
+        setTimeout(() => {
+          menuBar.classList.toggle("-translate-y-full");
+          menuBar.classList.toggle("opacity-0");
+          menuBar.classList.toggle("invisible");
+        }, 50);
+      } else if (!isHidden) {
+        menuBar.classList.toggle("-translate-y-full");
+        menuBar.classList.toggle("opacity-0");
+        menuBar.classList.toggle("invisible");
+        setTimeout(() => {
+          menuBar.classList.add("hidden");
+        }, 300);
+      }
     });
-
-    // Add event listener to the document to close elements when a click occurs outside of open elements
-    document.addEventListener("click", function (event) {
-        const targetElements = Array.from(document.querySelectorAll(".open"));
-        const clickedOutsideAllTargets = targetElements.every((element) => {
-            return !element.contains(event.target) && !event.target.closest(".toggle-button");
-        });
-
-        if (clickedOutsideAllTargets) {
-            targetElements.forEach((element) => {
-                element.classList.remove("open"); // Close open elements
-                element.classList.add("close"); // Hide elements
-            });
-        }
-    });
-
+  } else {
+    console.error("Hamburger menu button or menu bar not found in the DOM.");
+  }
 })();
+
+// Run on initial load to set the correct navbar version
+document.addEventListener("DOMContentLoaded", loadNavbar);
+
+// Listen for resize events to dynamically switch the navbar
+window.addEventListener("resize", loadNavbar);

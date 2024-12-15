@@ -23,7 +23,7 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 [menu] # Menu management
 	[[menu.main]]
 		name = 'Home'
-		url = "http://localhost:8888"
+		pageRef = '/'
 		weight = 10
 	[[menu.main]]
 		name = 'Tags'
@@ -33,6 +33,10 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 		name = 'Categories'
 		pageRef = '/categories'
 		weight = 25
+	[[menu.main]]
+		name = 'Book Consultation'
+		url = 'http://localhost:8888/what-we-offer#contact-form'
+		weight = 35
 
 [module]
   [module.hugoVersion]

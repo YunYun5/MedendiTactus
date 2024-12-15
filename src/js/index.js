@@ -1,5 +1,6 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const collapseToggles = document.querySelectorAll('[data-bs-toggle="collapse"]');
+  const helpSection = document.getElementById("help-section");
+  const collapseToggles = helpSection.querySelectorAll('[data-bs-toggle="collapse"]');
 
   collapseToggles.forEach((toggle) => {
     toggle.addEventListener("click", function () {

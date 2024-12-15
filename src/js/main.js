@@ -16,4 +16,10 @@ document.addEventListener("DOMContentLoaded", function () {
       logo.classList.add("navbar-brand-bg");
     }
   });
+
+  const hamMenu = document.querySelector(".ham-menu");
+
+  hamMenu.addEventListener("click", () => {
+    hamMenu.classList.toggle("active");
+  });
 });

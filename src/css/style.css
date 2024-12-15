@@ -141,53 +141,46 @@ h1 {
     border-top: 1px solid rgba(26, 105, 175, 0.25);
   }
 
-  .toggler {
-    background-color: transparent;
-    margin-bottom: 5px;
-  }
-
-  /* Default Hamburger icon */
-  .toggler-icon {
+  .ham-menu {
+    height: 30px;
     width: 30px;
-    height: 2px;
-    background-color: black;
-    display: inline-block;
+    margin-left: auto;
     position: relative;
   }
 
-  .toggler-icon::before,
-  .toggler-icon::after {
-    content: "";
-    width: 30px;
-    height: 2px;
+  .ham-menu span {
+    height: 3px;
+    width: 100%;
     background-color: black;
-    display: inline-block;
+    border-radius: 25px;
     position: absolute;
-    left: 0;
-    transition: all 0.3s ease;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    transition: 0.3s ease;
   }
 
-  .toggler-icon::before {
-    top: -8px;
+  .ham-menu span:nth-child(1) {
+    top: 25%;
   }
 
-  .toggler-icon::after {
-    top: 8px;
+  .ham-menu span:nth-child(3) {
+    top: 75%;
   }
 
-  /* Hide the middle line when not collapsed */
-  .toggler:not(.collapsed) .toggler-icon {
-    background-color: transparent;
+  .ham-menu.active span:nth-child(1) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(45deg);
   }
 
-  .toggler:not(.collapsed) .toggler-icon::before {
-    top: 0;
-    transform: rotate(45deg);
+  .ham-menu.active span:nth-child(2) {
+    opacity: 0;
+    transition: 0s ease;
   }
 
-  .toggler:not(.collapsed) .toggler-icon::after {
-    top: 0;
-    transform: rotate(-45deg);
+  .ham-menu.active span:nth-child(3) {
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
   }
 }
 
