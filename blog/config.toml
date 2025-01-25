@@ -34,7 +34,7 @@ disqusShortname = 'your-disqus-shortname' # <- Get form here : https://disqus.co
 		weight = 25
 	[[menu.main]]
 		name = 'Book Consultation'
-		url = 'http://localhost:8888/what-we-offer#contact-form'
+		url = 'https://medenditactus.netlify.app/what-we-offer#contact-form'
 		weight = 35
 
 [outputs]
