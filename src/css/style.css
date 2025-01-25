@@ -1,6 +1,6 @@
 body {
   /* Old background color code 000c17 */
-  background-color: black;
+  background-color: #111111;
   overflow-x: hidden;
 }
 
@@ -11,6 +11,10 @@ body {
   font-size: 18px;
   font-weight: 500;
   color: white;
+  transition:
+    background-color 0.2s ease-in-out,
+    outline 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
 }
 
 .btn-consult:hover {
@@ -19,11 +23,16 @@ body {
   outline: 3px;
   outline-style: solid;
   outline-color: #073765;
+  transform: scale(1.02);
 }
 
 .btn-blog {
   background-color: black;
   color: white;
+  transition:
+    background-color 0.2s ease-in-out,
+    outline 0.2s ease-in-out,
+    transform 0.2s ease-in-out;
 }
 
 .btn-blog:hover {
@@ -32,6 +41,7 @@ body {
   outline: 3px;
   outline-style: solid;
   outline-color: black;
+  transform: scale(1.02);
 }
 
 /* Navbar */
@@ -42,16 +52,21 @@ body {
   top: 0;
   left: 0;
   background-color: #a8a9aa; /* Transparent background */
+  transition:
+    background-color 0.5s ease-in-out,
+    color 0.5s ease-in-out;
 }
 
 .nav-item {
   font-size: 19px;
   font-weight: 400;
+  transition: transform 0.2s ease-in-out;
 }
 
 .nav-item:hover {
   text-decoration: underline;
   text-underline-position: under;
+  transform: scale(1.05);
 }
 
 .navbar-brand-bg {
@@ -59,6 +74,9 @@ body {
   max-width: 350px;
   height: auto;
   width: auto;
+  transition:
+    max-height 0.5s ease-in-out,
+    max-width 0.5s ease-in-out;
 }
 
 .navbar-brand-sm {
@@ -66,6 +84,9 @@ body {
   max-width: 175px;
   height: auto;
   width: auto;
+  transition:
+    max-height 0.5s ease-in-out,
+    max-width 0.5s ease-in-out;
 }
 
 .navbar-collapse-border {

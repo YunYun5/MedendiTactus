@@ -1,6 +1,6 @@
 # For local testing
 # npx decap-server
-local_backend: true
+# local_backend: true
 
 backend:
   name: git-gateway
@@ -40,6 +40,6 @@ collections:
         media_folder: "/blog/static/images" # Save images here in the repo
         public_folder: "/blog/images" # Accessible from this URL path
       - { label: "Caption", name: "caption", widget: "string" }
-      - { label: "Categories", name: "categories", widget: "list", default: [] }
-      - { label: "Tags", name: "tags", widget: "list", default: [] }
+      - { label: "Categories (Use Commas (,) to add multiple)", name: "categories", widget: "list", default: [] }
+      - { label: "Tags (Use Commas (,) to add multiple)", name: "tags", widget: "list", default: [] }
       - { label: "Draft", name: "draft", widget: "boolean", default: false }

@@ -22,8 +22,9 @@ function toggleDetails(cardId) {
   if (card.classList.contains("active")) {
     // Hide the section and reset the card
     card.classList.remove("active");
-    detailsSection.classList.add("d-none");
-    button.textContent = "More";
+    detailsSection.classList.remove("show");
+    setTimeout(() => detailsSection.classList.add("d-none"), 200); // Delay hiding until animation completes
+    button.textContent = "Show More";
     return;
   }
 
@@ -32,23 +33,37 @@ function toggleDetails(cardId) {
   const allDetailsSections = document.querySelectorAll(".hidden");
 
   allCards.forEach((c) => {
-    c.classList.remove("active");
-    const btn = c.querySelector("button");
-    if (btn) btn.textContent = "More"; // Reset text on all buttons
+    if (c !== card) {
+      c.classList.remove("active");
+      const btn = c.querySelector("button");
+      if (btn) btn.textContent = "Show More"; // Reset text on all buttons
+    }
   });
-  allDetailsSections.forEach((section) => section.classList.add("d-none"));
+
+  allDetailsSections.forEach((section) => {
+    if (section !== detailsSection) {
+      section.classList.remove("show");
+      setTimeout(() => section.classList.add("d-none"), 200); // Delay hiding for animation
+    }
+  });
 
   // Activate the clicked card and show its details section
   card.classList.add("active");
   detailsSection.classList.remove("d-none");
-  button.textContent = "Less";
 
-  // Smooth scroll to the revealed details section
-  if (window.innerWidth <= 767) {
-    detailsSection.scrollIntoView({ behavior: "smooth", block: "start" });
-  } else {
-    detailsSection.scrollIntoView({ behavior: "smooth", block: "center" });
-  }
+  // Add a slight delay to ensure DOM updates are applied before scrolling
+  setTimeout(() => {
+    detailsSection.classList.add("show");
+
+    // Smooth scroll to the revealed details section
+    if (window.innerWidth <= 767) {
+      detailsSection.scrollIntoView({ behavior: "smooth", block: "start" });
+    } else {
+      detailsSection.scrollIntoView({ behavior: "smooth", block: "center" });
+    }
+  }, 200); // Slight delay to allow DOM changes to take effect
+
+  button.textContent = "Show Less";
 }
 
 function resetForm() {
@@ -109,3 +124,13 @@ const handleSubmit = async (event) => {
 };
 
 form.addEventListener("submit", handleSubmit);
+
+document.addEventListener("DOMContentLoaded", () => {
+  const animatedElements = document.querySelectorAll(".animate-slide-left");
+
+  animatedElements.forEach((element) => {
+    element.addEventListener("animationend", () => {
+      element.classList.remove("animate-slide-left"); // Remove the animation class
+    });
+  });
+});

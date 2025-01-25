@@ -21,7 +21,9 @@ ul {
 .card.active {
   background-color: #1e62a3;
   transform: scale(1.05);
-  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
 }
 
 .btn-card {
@@ -37,8 +39,18 @@ ul {
 /* Hidden Section */
 
 .hidden {
+  opacity: 0;
+  transform: scale(0.95); /* Optional: Slightly smaller on initial load */
+  transition:
+    opacity 0.5s ease,
+    transform 0.5s ease; /* Smooth transition */
   background-color: #1e62a3;
   border-radius: 10px;
+}
+
+.hidden.show {
+  opacity: 1;
+  transform: scale(1); /* Bring it back to normal size */
 }
 
 .hidden-card {
@@ -104,5 +116,23 @@ h3 {
   .hero-section {
     position: relative;
     padding-top: 100px;
+  }
+}
+
+/* Animations */
+
+.animate-slide-left {
+  opacity: 0;
+  transform: translateX(-350%);
+  animation: slide-in-left linear forwards;
+  animation-timeline: view();
+  animation-iteration-count: 1;
+  animation-range: 0px 500px;
+}
+
+@keyframes slide-in-left {
+  to {
+    opacity: 1;
+    transform: translateX(0);
   }
 }

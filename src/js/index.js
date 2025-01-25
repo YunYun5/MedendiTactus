@@ -1,18 +1,18 @@
 document.addEventListener("DOMContentLoaded", function () {
   const helpSection = document.getElementById("help-section");
-  const collapseToggles = helpSection.querySelectorAll('[data-bs-toggle="collapse"]');
+  const showMoreButtons = helpSection.querySelectorAll('[data-bs-toggle="collapse"]');
 
-  collapseToggles.forEach((toggle) => {
-    toggle.addEventListener("click", function () {
-      const arrowIcon = this.querySelector("svg");
+  showMoreButtons.forEach((button) => {
+    button.addEventListener("click", function () {
       const target = document.querySelector(this.getAttribute("href"));
 
+      // Toggle the button text based on the collapse state
       target.addEventListener("shown.bs.collapse", () => {
-        arrowIcon.classList.add("rotated");
+        this.textContent = "Show Less";
       });
 
       target.addEventListener("hidden.bs.collapse", () => {
-        arrowIcon.classList.remove("rotated");
+        this.textContent = "Show More";
       });
     });
   });
@@ -50,5 +50,36 @@ document.addEventListener("DOMContentLoaded", function () {
         navItem.classList.add("text-white");
       });
     }
+  });
+});
+
+document.addEventListener("DOMContentLoaded", () => {
+  const animateElements = document.querySelectorAll(".animate-slide-left, .animate-slide-right");
+
+  const observer = new IntersectionObserver(
+    (entries, observer) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting && !entry.target.classList.contains("played")) {
+          entry.target.style.animationPlayState = "running"; // Play the animation
+
+          entry.target.addEventListener(
+            "animationend",
+            () => {
+              entry.target.classList.add("played"); // Mark as played
+              entry.target.classList.remove("animate-slide-left", "animate-slide-right"); // Remove animation classes
+            },
+            { once: true },
+          ); // Ensure the event listener is called only once
+
+          observer.unobserve(entry.target); // Stop observing the element
+        }
+      });
+    },
+    { threshold: 0.1 },
+  ); // Trigger when 10% of the element is visible
+
+  animateElements.forEach((el) => {
+    el.style.animationPlayState = "paused"; // Start paused
+    observer.observe(el); // Observe the element
   });
 });

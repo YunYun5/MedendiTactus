@@ -4,8 +4,9 @@
       <a class="" href="http://localhost:8888/">
         <img
           src="/assets/images/Medendi-Logo-Black.webp"
+          id="logo"
           alt="Medendi Tactus navigation bar logo"
-          class="d-inline-block align-top navbar-brand-bg" />
+          class="max-h-[100px] max-w-[350px] h-auto w-auto transition-all duration-300" />
       </a>
     </div>
 
@@ -30,20 +31,36 @@
       </div>
 
       <!-- Full Navbar (Visible on large screens) -->
-      <div id="full-navbar" class="hidden md:block">
-        <nav>
+      <div id="full-navbar" class="hidden lg:block">
+        <nav aria-label="Main Navigation">
           <ul class="flex items-center space-x-4">
             {{- partial "menu.html" (dict "menuID" "main" "page" .) -}}
           </ul>
         </nav>
       </div>
     </div>
+
+    {{- partial "search.html" . -}}
   </div>
   <div
     id="hamburger-menu-bar"
     class="invisible hidden flex-col space-y-4 mt-4 opacity-0 -translate-y-full transition-all ease-out duration-500">
     {{- partial "menu.html" (dict "menuID" "main" "page" .) -}}
   </div>
-  <!-- Search Functionality -->
-  <!-- {{- partial "search.html" . -}} -->
+
+  <div id="search" class="container mx-auto px-4 mt-3 hidden opacity-0 scale-95 transition-all duration-300 ease-in-out">
+    <div class="flex mb-2 items-center">
+      <p class="font-bold text-lg">Search For A Post</p>
+      <a href="/blog/search" class="ml-auto border rounded-full py-2 px-4 md:px-6 hover:bg-blue-100 bg-zinc-100">Search All</a>
+    </div>
+    <input
+      type="text"
+      id="nav-search-input"
+      class="border rounded px-4 py-2 w-full text-black mb-2 rounded-full"
+      placeholder="Search here..."
+      aria-label="Search button" />
+    <ul id="nav-search-results" class="flex flex-col gap-2">
+      <!-- Results will be dynamically added here -->
+    </ul>
+  </div>
 </div>

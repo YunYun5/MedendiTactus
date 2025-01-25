@@ -57,8 +57,12 @@
     <link rel="stylesheet" href="/css/style.css" />
     <link rel="stylesheet" href="/css/index.css" />
 
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
     <!-- For netlify identity -->
     <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
+
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   </head>
   <body>
     <!-- Navbar -->
@@ -104,12 +108,12 @@
         <div class="flex-lg align-items-center g-5 py-5">
           <div class="d-grid gap-4">
             <div class="d-grid gap-2">
-              <h1 class="mb-0">Your Path To Wellness</h1>
+              <h1 class="mb-0">Your Path to Wellness</h1>
               <p class="hero-subheading mb-0">Tailored Treatments for Your Unique Needs</p>
             </div>
             <div class="d-grid gap-2 d-md-flex justify-content-md-start">
               <a href="/what-we-offer#contact-form" class="btn btn-consult btn-lg px-4 me-md-2">Book Consultation</a>
-              <a href="/blog" class="btn btn-blog btn-lg px-4">Check Out The Blog</a>
+              <a href="/blog" class="btn btn-blog btn-lg px-4">Check Out My Blog</a>
             </div>
           </div>
         </div>
@@ -159,9 +163,9 @@
 
       <!-- Massage Therapy -->
       <div class="d-grid d-lg-flex gap-5 justify-content-center align-items-start">
-        <div class="col-12 col-lg-5">
+        <div class="col-12 col-lg-5 animate-slide-left">
           <div class="card border-0 step-card mx-auto rounded-5">
-            <div class="card-body d-flex justify-content-between p-4">
+            <div class="card-body flex-col justify-content-between p-4">
               <div>
                 <!-- Uncollaped Section Text Content -->
                 <h3 class="card-title fw-bold">Massage Therapy</h3>
@@ -186,30 +190,23 @@
                   </div>
                 </div>
               </div>
-              <!-- Arrow SVG -->
-              <a
-                href="#massageTherapyCollapse"
-                role="button"
-                aria-expanded="false"
-                aria-controls="massageTherapyCollapse"
-                data-bs-toggle="collapse"
-                aria-label="Expand Massage Therapy Details">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="50"
-                  height="50"
-                  fill="currentColor"
-                  class="bi bi-arrow-down-short"
-                  viewBox="0 0 16 16">
-                  <path
-                    fill-rule="evenodd"
-                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" />
-                </svg>
-              </a>
+              <!-- Show More -->
+              <div class="d-flex justify-content-center">
+                <a
+                  href="#massageTherapyCollapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="massageTherapyCollapse"
+                  data-bs-toggle="collapse"
+                  aria-label="Expand Massage Therapy Details"
+                  class="btn btn-card text-black fst-italic"
+                  >Show More
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-4 text-center">
+        <div class="col-12 col-lg-4 text-center animate-slide-right">
           <img
             src="/assets/images/Medendi-Massage.webp"
             class="img-fluid rounded-4"
@@ -220,9 +217,9 @@
 
       <!-- Facial Stretch Therapy -->
       <div class="my-5 d-grid d-lg-flex gap-5 justify-content-center align-items-start">
-        <div class="order-lg-2 col-12 col-lg-5">
+        <div class="order-lg-2 col-12 col-lg-5 animate-slide-right">
           <div class="card border-0 step-card mx-auto rounded-5">
-            <div class="card-body d-flex justify-content-between p-4">
+            <div class="card-body flex-col justify-content-between p-4">
               <div>
                 <!-- Uncollapsed Section Text Content -->
                 <h3 class="card-title fw-bold">Fascial Stretch Therapy</h3>
@@ -244,30 +241,23 @@
                   </div>
                 </div>
               </div>
-              <!-- Arrow SVG -->
-              <a
-                href="#fascialStretchCollapse"
-                role="button"
-                aria-expanded="false"
-                aria-controls="fascialStretchCollapse"
-                data-bs-toggle="collapse"
-                aria-label="Expand Fascial Stretch Details">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="50"
-                  height="50"
-                  fill="currentColor"
-                  class="bi bi-arrow-down-short"
-                  viewBox="0 0 16 16">
-                  <path
-                    fill-rule="evenodd"
-                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" />
-                </svg>
-              </a>
+              <!-- Show More -->
+              <div class="d-flex justify-content-center">
+                <a
+                  href="#fascialStretchCollapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="fascialStretchCollapse"
+                  data-bs-toggle="collapse"
+                  aria-label="Expand Fascial Stretch Details"
+                  class="btn btn-card text-black fst-italic"
+                  >Show More
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-4 text-center">
+        <div class="col-12 col-lg-4 text-center animate-slide-left">
           <img
             src="/assets/images/Medendi-Anxiety.webp"
             class="img-fluid rounded-4"
@@ -278,9 +268,9 @@
 
       <!-- Medical Exercise -->
       <div class="d-grid d-lg-flex gap-5 justify-content-center align-items-start">
-        <div class="col-12 col-lg-5">
+        <div class="col-12 col-lg-5 animate-slide-left">
           <div class="card border-0 step-card mx-auto rounded-5">
-            <div class="card-body d-flex justify-content-between p-4">
+            <div class="card-body flex-col justify-content-between p-4">
               <div>
                 <!-- Uncollaped Section Text Content -->
                 <h3 class="card-title fw-bold">Medical Exercise</h3>
@@ -305,30 +295,23 @@
                   </div>
                 </div>
               </div>
-              <!-- Arrow SVG -->
-              <a
-                href="#medicalExerciseCollapse"
-                role="button"
-                aria-expanded="false"
-                aria-controls="medicalExerciseCollapse"
-                data-bs-toggle="collapse"
-                aria-label="Expand Medical Exercise Details">
-                <svg
-                  xmlns="http://www.w3.org/2000/svg"
-                  width="50"
-                  height="50"
-                  fill="currentColor"
-                  class="bi bi-arrow-down-short"
-                  viewBox="0 0 16 16">
-                  <path
-                    fill-rule="evenodd"
-                    d="M8 4a.5.5 0 0 1 .5.5v5.793l2.146-2.147a.5.5 0 0 1 .708.708l-3 3a.5.5 0 0 1-.708 0l-3-3a.5.5 0 1 1 .708-.708L7.5 10.293V4.5A.5.5 0 0 1 8 4z" />
-                </svg>
-              </a>
+              <!-- Show More -->
+              <div class="d-flex justify-content-center">
+                <a
+                  href="#medicalExerciseCollapse"
+                  role="button"
+                  aria-expanded="false"
+                  aria-controls="medicalExerciseCollapse"
+                  data-bs-toggle="collapse"
+                  aria-label="Expand Medical Exercise Details"
+                  class="btn btn-card text-black fst-italic"
+                  >Show More
+                </a>
+              </div>
             </div>
           </div>
         </div>
-        <div class="col-12 col-lg-4 text-center">
+        <div class="col-12 col-lg-4 text-center animate-slide-right">
           <img
             src="/assets/images/Medendi-Exercise.webp"
             class="img-fluid rounded-4"
@@ -349,7 +332,7 @@
             <div class="card-body d-flex justify-content-between">
               <div class="text-white">
                 <!-- Seciton Text Content -->
-                <h3 class="card-title fw-bold">Im Clint</h3>
+                <h3 class="card-title fw-bold">I'm Clint</h3>
                 <p class="card-text">
                   I bring a holistic approach to health and wellness. With a 2nd-degree black belt in Brazilian Jiu-Jitsu and a black belt
                   in Japanese Jiu-Jitsu, I have honed my expertise and dedication to martial arts over decades and understand the type of
@@ -375,7 +358,7 @@
 
     <!-- Footer -->
     <div class="footer">
-      <footer class="d-grid d-lg-flex mx-5 pt-4 pb-3 mt-5 border-top gap-5 text-black">
+      <footer class="d-grid d-lg-flex mx-5 pt-4 pb-3 mt-5 gap-5 text-black">
         <div class="col mb-3 d-flex flex-column justify-content-between">
           <a href="/" class="d-flex align-items-center mb-3">
             <img
@@ -407,7 +390,9 @@
             <ul class="nav flex-column">
               <li class="footer-item"><p class="p-0">info@medenditactus.com</p></li>
               <li class="footer-item"><p class="p-0">(905) 630-8952</p></li>
-              <li class="footer-item"><p class="p-0">3295 Mainway #4, Burlington, ON L7M 1A6</p></li>
+              <li class="footer-item">
+                <p class="p-0">3295 Mainway #4<br />Burlington, ON<br />L7M 1A6</p>
+              </li>
             </ul>
           </div>
 
@@ -440,6 +425,8 @@
 
     <!-- For netlify identity -->
     <script>
+      // AOS.init();
+
       if (window.netlifyIdentity) {
         window.netlifyIdentity.on("init", (user) => {
           if (!user) {

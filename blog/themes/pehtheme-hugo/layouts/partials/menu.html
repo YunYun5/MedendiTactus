@@ -11,19 +11,23 @@
 {{- $menuID := .menuID }}
 
 {{- with index site.Menus $menuID }}
-  <nav id="menu-bar" class="block transition ease-in-out delay-150">
-    <ul class="flex flex-col md:flex-row items-center flex-nowrap whitespace-nowrap overflow-x-auto md:space-x-4">
-      {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
-    </ul>
-  </nav>
+  <ul class="flex flex-col lg:flex-row items-center flex-nowrap whitespace-nowrap overflow-x-auto lg:space-x-4">
+    {{- partial "inline/menu/walk.html" (dict "page" $page "menuEntries" .) }}
+  </ul>
 {{- end }}
 
 {{- define "partials/inline/menu/walk.html" }}
   {{- $page := .page }}
   {{- range .menuEntries }}
     {{- $attrs := dict "href" .URL }}
-    {{- /* Add the "rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" class to all links */}}
-    {{- $attrs = merge $attrs (dict "class" "md:rounded-full md:border px-6 py-2 md:bg-zinc-100 hover:bg-zinc-200") }}
+
+    {{- if eq .Name "Book Consultation" }}
+      {{- /* Add special class for the Book Consultation button */}}
+      {{- $attrs = merge $attrs (dict "class" "px-6 py-2 bg-[#073765] text-white rounded-full hover:bg-blue-600") }}
+    {{ else }}
+      {{- /* Add the "rounded-full border px-6 py-2 bg-zinc-100 hover:bg-zinc-200" class to all links */}}
+      {{- $attrs = merge $attrs (dict "class" "lg:rounded-full lg:border px-6 py-2 lg:bg-zinc-100 hover:bg-zinc-200") }}
+    {{ end }}
 
     {{- if $page.IsMenuCurrent .Menu . }}
       {{- /* Add the "active:bg-zinc-300" class if the link is the current page */}}

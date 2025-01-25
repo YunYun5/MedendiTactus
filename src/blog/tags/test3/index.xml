@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Test3 on Medendi Tactus</title>
+    <link>/blog/tags/test3/</link>
+    <description>Recent content in Test3 on Medendi Tactus</description>
+    <generator>Hugo</generator>
+    <language>en-us</language>
+    <lastBuildDate>Sat, 28 Dec 2024 15:14:00 +0000</lastBuildDate>
+    <atom:link href="/blog/tags/test3/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Laptop test</title>
+      <link>/blog/laptop-test/</link>
+      <pubDate>Sat, 28 Dec 2024 15:14:00 +0000</pubDate>
+      <guid>/blog/laptop-test/</guid>
+      <description>&lt;p&gt;asda&lt;/p&gt;</description>
+    </item>
+  </channel>
+</rss>

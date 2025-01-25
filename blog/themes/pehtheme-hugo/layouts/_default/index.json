@@ -1,0 +1,14 @@
+{
+    "items": [
+      {{- range $index, $page := .Site.RegularPages -}}
+      {
+        "title": {{ $page.Title | jsonify }},
+        "content": {{ $page.Plain | jsonify }},
+        "url": {{ $page.Permalink | jsonify }},
+        "description": {{ $page.Description | jsonify }},
+        "image": {{ $page.Params.image | jsonify }}
+      }{{ if lt $index (sub (len .Site.RegularPages) 1) }},{{ end }}
+      {{- end -}}
+    ]
+  }
+  
