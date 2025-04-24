@@ -16,6 +16,7 @@ tags:
   - feature
 draft: false
 ---
+`<iframe width="560" height="315" src="https://www.youtube.com/embed/shky1WO7bng?si=sOfyDPCLjYX6nfsm" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>`
 
 In the vast tapestry of the cosmos, one of the most intriguing quests of modern astronomy is the search for exoplanets, distant celestial bodies that might bear a resemblance to our own Earth. This endeavor is driven by the tantalizing question: Could there be other habitable worlds out there? In this article, we embark on a journey to explore the captivating hunt for Earth's cosmic cousins.
 
