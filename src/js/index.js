@@ -19,7 +19,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
   const navbar = document.querySelector(".navbar");
   const navItems = document.querySelectorAll(".nav-item");
-  const heroSection = document.querySelector(".hero-section");
+  const heroSection = document.querySelector(".hero-gradient");
   const logo = document.querySelector(".navbar-brand-bg ");
 
   const whiteLogoSrc = "assets/images/Medendi-Logo-White.webp";
