@@ -136,3 +136,14 @@ h3 {
     transform: translateX(0);
   }
 }
+
+/* Netlify success message toggle */
+#success-section {
+  display: none;
+}
+#success-section:target {
+  display: block;
+}
+#success-section:target ~ #contact-form {
+  display: none;
+}
